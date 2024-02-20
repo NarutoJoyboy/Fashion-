@@ -6,6 +6,8 @@ import WelcomePage from './Pages/WelcomePage';
 import OnboardingScreen from './Pages/OnboardingScreen';
 import Signin from './Pages/Signin';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import CreateAccount from './Pages/CreateAcc';
+import VerifyCode from './Pages/VerifyCode';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -31,6 +33,8 @@ export default function App() {
         <Stack.Screen name="Welcome" component={WelcomePage} />
         <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
         <Stack.Screen name="Signin" component={Signin} />
+        <Stack.Screen name='CreateAccount' component={CreateAccount}/>
+        <Stack.Screen name='VerifyCode' component={VerifyCode}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

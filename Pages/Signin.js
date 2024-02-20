@@ -11,6 +11,8 @@ import React, {useState} from 'react';
 import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import auth from '@react-native-firebase/auth';
+import CreateAccount from './CreateAcc';
+
 
 export default function Signin({navigation}) {
   const [Vieww, setVieww] = useState(false);
@@ -103,7 +105,7 @@ export default function Signin({navigation}) {
       </View>
       <View style={styles.contain3}>
         <Text style={styles.txt6}>Don't have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.navigate(Signup_1)}>
+        <TouchableOpacity onPress={() => navigation.navigate(CreateAccount)}>
           <Text style={styles.txt7}>Sign Up</Text>
         </TouchableOpacity>
       </View>

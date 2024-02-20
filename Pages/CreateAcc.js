@@ -3,21 +3,21 @@ import React, { useState } from 'react'
 import Feather from "react-native-vector-icons/Feather"
 import FontAwesome from "react-native-vector-icons/FontAwesome"
 import { CheckBox } from 'react-native-elements'
-import Verification_1 from './Verification_1'
-import Signin_1 from './Signin_1'
+import Signin from './Signin'
+import VerifyCode from './VerifyCode'
 
-export default function Signup_1({navigation}) {
+export default function CreateAccount({navigation}) {
 
     const [Vieww, setVieww] = useState(false)
     const [ischeck, setischeck] = useState(false)
 
-    const [nameCheck, setnameCheck] = useState('')
-    const [emailEnter, setemailEnter] = useState('')
-    const[passwordEnter, setpasswordEnter] = useState('')
+    // const [nameCheck, setnameCheck] = useState('')
+    // const [emailEnter, setemailEnter] = useState('')
+    // const[passwordEnter, setpasswordEnter] = useState('')
 
-    const [nameValid, setnameValid] = useState(false)
-    const [emailValid, setemailvalid] = useState(false)
-    const [passwordValid, setpasswordValid] = useState(false)
+    // const [nameValid, setnameValid] = useState(false)
+    // const [emailValid, setemailvalid] = useState(false)
+    // const [passwordValid, setpasswordValid] = useState(false)
 
 
     // const nameEnteryCheck = (text) => {
@@ -82,7 +82,7 @@ export default function Signup_1({navigation}) {
                 placeholder='Ex. John Doe' 
                 placeholderTextColor={'grey'} 
                 style={(styles.txt, styles.input)}
-                value={setnameCheck}
+                // value={setnameCheck}
                 // onChangeText={nameEnteryCheck}
                 />
 
@@ -94,7 +94,7 @@ export default function Signup_1({navigation}) {
                 placeholderTextColor={'grey'} 
                 keyboardType='email-address' 
                 // onChangeText={emailEnteryCheck}
-                value={emailEnter}
+                // value={emailEnter}
                 
                 />
                 <Text style={styles.txt2}>Password</Text>
@@ -107,8 +107,8 @@ export default function Signup_1({navigation}) {
                     style={(styles.input)} 
                     placeholderTextColor={'grey'}  
                     // onChangeText={passwordEnteryCheck}
-                value={passwordEnter}
-                maxLength={10}
+                // value={passwordEnter}
+                // maxLength={10}
                     
                     />
 
@@ -130,7 +130,7 @@ export default function Signup_1({navigation}) {
                 </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity style={styles.button1} onPress={()=> {createUser(), ValidEntry()}}>
+                <TouchableOpacity style={styles.button1} onPress={()=>navigation.navigate(VerifyCode)}>
                     <Text style={styles.txt4}>Sign Up</Text>
                 </TouchableOpacity>
             </View>
@@ -157,7 +157,7 @@ export default function Signup_1({navigation}) {
             </View>
             <View style={styles.contain3}>
                 <Text style={styles.txt6}>Already have an account? </Text>
-                <TouchableOpacity onPress={()=>navigation.navigate(Signin_1)}>
+                <TouchableOpacity onPress={()=>navigation.navigate(Signin)}>
                     <Text style={styles.txt7}>Sign In</Text>
                 </TouchableOpacity>
             </View>
@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
 
     },
     button1: {
-        backgroundColor: '#DF711D',
+        backgroundColor: 'brown',
         borderRadius: 20,
         marginTop: 30,
 
@@ -274,12 +274,12 @@ const styles = StyleSheet.create({
         fontSize:15,
     },
     txt7:{
-        color: '#DF711D',
+        color: 'brown',
         textDecorationLine: 'underline',
         fontSize: 15,
     },
-    img:(
-        width=10,
-        height=20
-    )
+    img:{
+        width:50,
+        height:50,
+    }
 })

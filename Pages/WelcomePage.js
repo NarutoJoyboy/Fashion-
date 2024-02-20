@@ -2,6 +2,7 @@ import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import OnboardingScreen from './OnboardingScreen';
 import {useNavigation} from '@react-navigation/native';
+import Signin from './Signin';
 
 export default function WelcomePage() {
   const navigation = useNavigation();
@@ -29,7 +30,7 @@ export default function WelcomePage() {
       </View>
       <View style={styles.signinoption}>
         <Text style={styles.accountoption}>Alreasy have an Account? </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate(Signin)}>
           <Text style={styles.signin}>Sign In</Text>
         </TouchableOpacity>
       </View>
