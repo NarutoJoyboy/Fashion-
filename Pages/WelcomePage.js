@@ -1,4 +1,4 @@
-import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, Image, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
 import React from 'react';
 import OnboardingScreen from './OnboardingScreen';
 import {useNavigation} from '@react-navigation/native';
@@ -6,10 +6,15 @@ import Signin from './Signin';
 
 export default function WelcomePage() {
   const navigation = useNavigation();
+  const width = Dimensions.get('window').width
   return (
     <View>
-      <View>
-        <Image source={require('./Images/image10.png')} style={{height: 450}} />
+      <View style={{flexDirection:'row', marginTop:50, marginHorizontal:20}}>
+        <Image source={require('./Images/image10.png')} style={{height: 440, width:width/2.2, borderRadius:80, marginRight:10}} />
+        <View>
+          <Image source={require('./Images/image10.png')} style={{width:width/2.3 ,height:250, marginBottom:10, borderRadius:100, }}/>
+          <Image source={require('./Images/image10.png')} style={{width:width/2.3 ,height:170, borderRadius:100, alignSelf:'center'}} />
+        </View>
       </View>
       <View>
         <Text style={{fontSize: 20, color: 'black', textAlign: 'center'}}>
