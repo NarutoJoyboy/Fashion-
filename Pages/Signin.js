@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Alert,
   SafeAreaView,
+  Dimensions,
 } from 'react-native';
 import React, {useState} from 'react';
 import Feather from 'react-native-vector-icons/Feather';
@@ -15,6 +16,9 @@ import CreateAccount from './CreateAcc';
 
 
 export default function Signin({navigation}) {
+
+  const Width = Dimensions.get('window').width;
+
   const [Vieww, setVieww] = useState(false);
 
   const [emailEnter, setemailEnter] = useState('');
@@ -60,7 +64,7 @@ export default function Signin({navigation}) {
           <TextInput
             secureTextEntry={!Vieww}
             placeholder="***********"
-            style={styles.input}
+            style={[styles.input, {width:Width/1.3, }]} 
             placeholderTextColor={'grey'}
             value={PasswordEnter}
             // onChangeText={passwordEntryCheck}

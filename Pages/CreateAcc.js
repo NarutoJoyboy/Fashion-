@@ -1,15 +1,17 @@
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert, SafeAreaView, Image  } from 'react-native'
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert, SafeAreaView, Image, Dimensions  } from 'react-native'
 import React, { useState } from 'react'
 import Feather from "react-native-vector-icons/Feather"
 import FontAwesome from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from 'react-native-elements'
 import Signin from './Signin'
 import VerifyCode from './VerifyCode'
 
 export default function CreateAccount({navigation}) {
 
+    const Width = Dimensions.get('window').width;
+
     const [Vieww, setVieww] = useState(false)
     const [ischeck, setischeck] = useState(false)
+
 
     // const [nameCheck, setnameCheck] = useState('')
     // const [emailEnter, setemailEnter] = useState('')
@@ -104,11 +106,8 @@ export default function CreateAccount({navigation}) {
                     <TextInput 
                     secureTextEntry={!Vieww} 
                     placeholder='***********' 
-                    style={(styles.input)} 
+                    style={[styles.input, {width:Width/1.3, }]} 
                     placeholderTextColor={'grey'}  
-                    // onChangeText={passwordEnteryCheck}
-                // value={passwordEnter}
-                // maxLength={10}
                     
                     />
 
@@ -117,13 +116,9 @@ export default function CreateAccount({navigation}) {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.contain5}>
-
-                    <CheckBox 
-                    checkedColor='#DF711D'
-                    checked={ischeck}
-                    onPress={()=> setischeck(!ischeck)}
-                    style={styles.check}
-                    />
+                    <TouchableOpacity onPress={()=>setischeck(!ischeck)} style={{paddingRight:10}}>
+                        <Feather name={ischeck ? 'check-square': 'square'} size={23} color={ischeck ? 'brown': 'grey'} />
+                    </TouchableOpacity>
                     <Text style={styles.txt8}>Agree with </Text>
                 <TouchableOpacity>
                     <Text style={styles.txt3}>Terms & Condition</Text>
@@ -145,7 +140,6 @@ export default function CreateAccount({navigation}) {
                 <FontAwesome name='apple' color={'black'} size={30}/>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.apple}>
-                {/* <FontAwesome name='google' color={'black'} size={30}/> */}
                 <Image source={require('./Images/google-logo.png')}
                 
                 style={styles.img}
@@ -210,7 +204,8 @@ const styles = StyleSheet.create({
     },
     contain5:{
         flexDirection:'row',
-        alignItems:'center'
+        alignItems:'center',
+        marginTop:20
     },
     check:{
         

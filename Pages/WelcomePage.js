@@ -1,4 +1,11 @@
-import {View, Text, Image, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+} from 'react-native';
 import React from 'react';
 import OnboardingScreen from './OnboardingScreen';
 import {useNavigation} from '@react-navigation/native';
@@ -6,24 +13,33 @@ import Signin from './Signin';
 
 export default function WelcomePage() {
   const navigation = useNavigation();
-  const width = Dimensions.get('window').width
+  const width = Dimensions.get('window').width;
   return (
     <View>
-      <View style={{flexDirection:'row', marginTop:50, marginHorizontal:20}}>
-        <Image source={require('./Images/image10.png')} style={{height: 440, width:width/2.2, borderRadius:80, marginRight:10}} />
+      <View style={{flexDirection: 'row', marginTop: 50, marginHorizontal: 20}}>
+        <Image
+          source={require('./Images/image10.png')}
+          style={[styles.image1, {width: width / 2.2}]}
+        />
         <View>
-          <Image source={require('./Images/image10.png')} style={{width:width/2.3 ,height:250, marginBottom:10, borderRadius:100, }}/>
-          <Image source={require('./Images/image10.png')} style={{width:width/2.3 ,height:170, borderRadius:100, alignSelf:'center'}} />
+          <Image
+            source={require('./Images/image10.png')}
+            style={[styles.image2, {width: width / 2.3,}]}
+          />
+          <Image
+            source={require('./Images/image10.png')}
+            style={[styles.image3, {width: width / 2.3,}]}
+          />
         </View>
       </View>
-      <View>
-        <Text style={{fontSize: 20, color: 'black', textAlign: 'center'}}>
+      <View style={{alignSelf:'center'}}>
+        <Text style={{fontSize: 30, color: 'black', textAlign: 'center', textAlign:'center',marginHorizontal:50, marginTop:40}}>
           The <Text style={{color: 'brown'}}>Fashion App</Text> That Makes You
           Look Your Best
         </Text>
-        <Text style={{textAlign: 'center'}}>
+        <Text style={{textAlign: 'center', color:'grey', fontSize:17, marginHorizontal:60, marginTop:20}}>
           Lorem Ipsum dipsum tipsum lipsim kilof unsun fvsvnvksnv vmvkv vksnkf
-          nvnvk fsnks{' '}
+          nvnvk fsnks
         </Text>
       </View>
       <View>
@@ -35,7 +51,7 @@ export default function WelcomePage() {
       </View>
       <View style={styles.signinoption}>
         <Text style={styles.accountoption}>Alreasy have an Account? </Text>
-        <TouchableOpacity onPress={()=>navigation.navigate(Signin)}>
+        <TouchableOpacity onPress={() => navigation.navigate(Signin)}>
           <Text style={styles.signin}>Sign In</Text>
         </TouchableOpacity>
       </View>
@@ -49,7 +65,7 @@ const styles = StyleSheet.create({
     margin: 20,
     borderRadius: 20,
     padding: 10,
-    marginBottom: 30,
+    marginVertical: 30,
   },
   signinoption: {flexDirection: 'row', alignSelf: 'center'},
   signin: {
@@ -59,4 +75,15 @@ const styles = StyleSheet.create({
   },
   accountoption: {fontSize: 18, color: 'black'},
   buttontxt1: {color: 'white', fontSize: 20, textAlign: 'center'},
+  image1: {height: 440, borderRadius: 80, marginRight: 10},
+  image2: {
+    height: 250,
+    marginBottom: 10,
+    borderRadius: 100,
+  },
+  image3:{
+    height: 170,
+    borderRadius: 100,
+    alignSelf: 'center',
+  }
 });

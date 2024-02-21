@@ -9,8 +9,8 @@ export default function VerifyCode() {
   return (
     <View>
       <View>
-        <TouchableOpacity style={{margin: 20}}>
-          <AntDesign name="arrowleft" color={'black'} size={30} />
+        <TouchableOpacity style={{margin: 20, borderWidth:1, alignSelf:'flex-start', borderRadius:25,}} onPress={()=>navigation.goBack()}>
+          <AntDesign name="arrowleft" color={'black'} size={30} style={{padding:8}}/>
         </TouchableOpacity>
       </View>
       <View style={{alignSelf: 'center', marginTop: 70}}>
