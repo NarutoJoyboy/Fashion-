@@ -3,6 +3,7 @@ import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
 import {useNavigation} from '@react-navigation/native';
+import ProfileComplete from './ProfileComplete';
 
 export default function NewPassword() {
   const navigation = useNavigation();
@@ -105,7 +106,9 @@ export default function NewPassword() {
           marginHorizontal: 30,
           borderRadius: 40,
           marginTop: 30,
-        }}>
+        }}
+        onPress={()=>navigation.navigate(ProfileComplete)}
+        >
         <Text
           style={{
             textAlign: 'center',

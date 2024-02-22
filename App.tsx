@@ -9,6 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import CreateAccount from './Pages/CreateAcc';
 import VerifyCode from './Pages/VerifyCode';
 import NewPassword from './Pages/NewPassword';
+import ProfileComplete from './Pages/ProfileComplete';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -24,6 +25,7 @@ export default function App() {
         <Stack.Screen name='CreateAccount' component={CreateAccount}/>
         <Stack.Screen name='VerifyCode' component={VerifyCode}/>
         <Stack.Screen name='NewPassword' component={NewPassword}/>
+        <Stack.Screen name='ProfileComplete' component={ProfileComplete}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
