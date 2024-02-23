@@ -12,10 +12,10 @@ export default function Home() {
     const Height = Dimensions.get('window').height;
 
     const Images= [
-        {title:"Shyam", image: require('./Images/image10.png')},
-        {title:"Shyam", image: require('./Images/image10.png')},
-        {title:"Shyam", image: require('./Images/image10.png')},
-        {title:"Shyam", image: require('./Images/image10.png')},
+        {title:"Shyam", image: require('../Images/image10.png')},
+        {title:"Shyam", image: require('../Images/image10.png')},
+        {title:"Shyam", image: require('../Images/image10.png')},
+        {title:"Shyam", image: require('../Images/image10.png')},
     ]
 
   return (
@@ -62,7 +62,7 @@ export default function Home() {
         renderItem={(index)=>(
             <View>
                 <Text style={{color:'black', fontSize:30}}>{index.title}</Text>
-                <Image source={require('./Images/image10.png')} style={{width:Width/1.3, height:Height/3.5 }}/>
+                <Image source={require('../Images/image10.png')} style={{width:Width/1.3, height:Height/3.5 }}/>
             </View>
         )}
         
