@@ -10,22 +10,31 @@ import CreateAccount from './Pages/CreateAcc';
 import VerifyCode from './Pages/VerifyCode';
 import NewPassword from './Pages/NewPassword';
 import ProfileComplete from './Pages/ProfileComplete';
+import Home from './Pages/Home';
+import BottomNavigation from './Pages/BottomNavigation';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
+
+  const MainScreens = () =>{
+    return(
+    <BottomNavigation/>
+    )
+  }
 
   
 
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Welcome" component={WelcomePage} />
+        {/* <Stack.Screen name="Welcome" component={WelcomePage} />
         <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
         <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name='CreateAccount' component={CreateAccount}/>
         <Stack.Screen name='VerifyCode' component={VerifyCode}/>
         <Stack.Screen name='NewPassword' component={NewPassword}/>
-        <Stack.Screen name='ProfileComplete' component={ProfileComplete}/>
+        <Stack.Screen name='ProfileComplete' component={ProfileComplete}/> */}
+        <Stack.Screen name='MainScreens' component={MainScreens}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

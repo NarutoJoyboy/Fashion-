@@ -40,7 +40,7 @@ export default function OnboardingScreen() {
       onSkip={()=>navigation.navigate(CreateAccount)}
       onDone={()=>navigation.navigate(CreateAccount)}
 
-      SkipButtonComponent={Skip}
+      SkipButt
       NextButtonComponent={Next}
         pages={[
           {
