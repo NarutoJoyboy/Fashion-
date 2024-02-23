@@ -10,8 +10,8 @@ import CreateAccount from './Pages/CreateAcc';
 import VerifyCode from './Pages/VerifyCode';
 import NewPassword from './Pages/NewPassword';
 import ProfileComplete from './Pages/ProfileComplete';
-import Home from './Pages/Home';
-import BottomNavigation from './Pages/BottomNavigation';
+import Home from './Pages/BottomNavComponent/Home';
+import BottomNavigation from './Pages/BottomNavComponent/BottomNavigation';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
