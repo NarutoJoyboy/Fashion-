@@ -73,13 +73,15 @@ export default function Productdetails() {
             <Text>Product's data like what are they and their type quality and vbs heb kshsb vsjjhvbj bjhsb b jhb j j j jsjs vj sj j sd sj  s sbjhsbhbfhbs </Text>
             <View style={styles.divider}/>
         </View>
-        <View>
+        <View style={styles.Size}>
             <Text>Select Size</Text>
             {SizeList.map((item)=>{
                 return(
-                    <View>
-                        
-                    </View>
+                    
+                        <TouchableOpacity key={item.id} style={styles.sizes}>
+                            <Text>{item.name}</Text>
+                        </TouchableOpacity>
+                    
                 )
             })}
         </View>
@@ -123,6 +125,15 @@ const styles = StyleSheet.create({
         marginTop:30,
         borderColor:'grey',
 
+    },
+    Size:{
+        flexDirection:'row'
+    },
+    sizes:{
+        borderWidth:1,
+        borderRadius:20,
+        padding:10,
+        
     }
 
 })
