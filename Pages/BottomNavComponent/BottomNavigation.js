@@ -5,6 +5,7 @@ import Home from './Home';
 import Cart from './Cart';
 import Feather from "react-native-vector-icons/Feather"
 import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons"
+import Wishlist from './Wishlist';
 
 export default function BottomNavigation() {
 
@@ -41,8 +42,8 @@ export default function BottomNavigation() {
             
         }}
         /> 
-        {/* <Tab.Screen name='Wishlist' component={}/> 
-        <Tab.Screen name='Profile' component={}/>  */}
+        <Tab.Screen name='Wishlist' component={Wishlist}/> 
+        {/* <Tab.Screen name='Profile' component={}/>  */}
     </Tab.Navigator>
   )
 }
