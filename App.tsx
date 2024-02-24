@@ -12,6 +12,7 @@ import NewPassword from './Pages/NewPassword';
 import ProfileComplete from './Pages/ProfileComplete';
 import Home from './Pages/BottomNavComponent/Home';
 import BottomNavigation from './Pages/BottomNavComponent/BottomNavigation';
+import Productdetails from './Pages/BottomNavComponent/productdetails';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -35,6 +36,7 @@ export default function App() {
         <Stack.Screen name='NewPassword' component={NewPassword}/>
         <Stack.Screen name='ProfileComplete' component={ProfileComplete}/> */}
         <Stack.Screen name='MainScreens' component={MainScreens}/>
+        <Stack.Screen name='Productdetails' component={Productdetails}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
