@@ -21,6 +21,7 @@ export default function BottomNavigation() {
       tabBarActiveTintColor:'white',
       tabBarInactiveTintColor:'grey',
       tabBarShowLabel:false,
+
     }}>
         <Tab.Screen name='Home' component={Home}
         
@@ -63,6 +64,7 @@ const styles = StyleSheet.create({
     marginHorizontal:30,
     borderRadius:30,
     height:70,
+
     
 
   }

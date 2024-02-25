@@ -6,6 +6,7 @@ import {
   ScrollView,
   FlatList,
   Image,
+  Dimensions
 } from 'react-native';
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -23,12 +24,14 @@ export default function Wishlist() {
     {title: 'T-shirt', id: 6},
   ];
 
+  const Width= Dimensions.get('window').width
+
   const itemlist = [
     {
       photo: require('../Images/4.png'),
       name: 'Brown Jacket',
       Price: '$87.43',
-      rating: '5',
+      rating: '5.0',
       id: 1,
     },
     {
@@ -111,7 +114,7 @@ export default function Wishlist() {
   ];
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor:'white'}}>
       <View style={styles.header}>
         <TouchableOpacity
           style={styles.button1}
@@ -119,11 +122,11 @@ export default function Wishlist() {
           <AntDesign name="arrowleft" size={23} color={'black'} />
         </TouchableOpacity>
         <View style={{}}>
-          <Text style={styles.whistxt}>My Wishlist</Text>
+          <Text style={[styles.whistxt, {marginLeft:Width/4}]}>My Wishlist</Text>
         </View>
       </View>
       <View>
-        <ScrollView horizontal={true} style={{marginLeft: 10}}>
+        <ScrollView horizontal={true} style={{marginLeft: 10}} showsHorizontalScrollIndicator={false}>
           {filterList.map(item => {
             return (
               <View key={item.id}>
@@ -145,7 +148,7 @@ export default function Wishlist() {
           })}
         </ScrollView>
       </View>
-      <View style={{flex: 1}}>
+      <View style={{flex: 1,}}>
         <FlatList
           data={itemlist}
           keyExtractor={item => item.id}
@@ -153,25 +156,26 @@ export default function Wishlist() {
           numColumns={2}
           renderItem={({item}) => {
             return (
-              <View style={{borderWidth: 1, marginLeft: 10}}>
-                <TouchableOpacity style={{padding:10, borderRadius:30, backfaceVisibility:'hidden'}}>
-                  <AntDesign name='heart' size={20} color={'brown'}/>
-                </TouchableOpacity>
+              <View style={{ marginLeft: 20, marginVertical:10}}>
                 <Image
                   source={item.photo}
-                  style={{width: 180, height: 180, borderRadius: 20}}
+                  style={{width: 170, height: 170, borderRadius: 10, resizeMode:'cover', marginBottom:10, }}
                 />
+                <TouchableOpacity style={{padding:10, borderRadius:30, backgroundColor:'white', alignSelf:'flex-end', position:'absolute', right:0,  }}>
+                  <AntDesign name='heart' size={20} color={'brown'}/>
+                </TouchableOpacity>
                 <View
                   style={{
                     flexDirection: 'row',
                     justifyContent: 'space-between',
+                    
                   }}>
                   <Text style={{color: 'black', fontSize: 20}}>
                     {item.name}
                   </Text>
-                  <View style={{flexDirection: 'row'}}>
-                    <AntDesign name="star" size={20} color={'red'} />
-                    <Text style={{color: 'grey', fontSize: 15}}>
+                  <View style={{flexDirection: 'row', alignContent:'center'}}>
+                    <AntDesign name="star" size={15} color={'red'} />
+                    <Text style={{color: 'grey', fontSize: 15, paddingLeft:5}}>
                       {item.rating}
                     </Text>
                   </View>
@@ -189,7 +193,6 @@ export default function Wishlist() {
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
-    // justifyContent: 'space-between',
     margin: 10,
     alignItems: 'center',
     borderWidth: 1,
@@ -203,5 +206,6 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 25,
     textAlign: 'center',
+    // marginLeft:100
   },
 });
