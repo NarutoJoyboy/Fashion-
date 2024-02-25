@@ -6,6 +6,7 @@ import Cart from './Cart';
 import Feather from "react-native-vector-icons/Feather"
 import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons"
 import Wishlist from './Wishlist';
+import AntDesign from 'react-native-vector-icons/AntDesign'
 
 export default function BottomNavigation() {
 
@@ -19,7 +20,7 @@ export default function BottomNavigation() {
       initialRouteName:"Home",
       tabBarActiveTintColor:'white',
       tabBarInactiveTintColor:'grey',
-      
+      tabBarShowLabel:false,
     }}>
         <Tab.Screen name='Home' component={Home}
         
@@ -29,7 +30,7 @@ export default function BottomNavigation() {
               
               <SimpleLineIcons name='home' color={activecolor==='1' ? 'white' : 'grey'} size={20}/>
           ),
-          tabBarShowLabel:false
+          
         }}
         />
         <Tab.Screen name='Cart' component={Cart}
@@ -38,11 +39,18 @@ export default function BottomNavigation() {
           tabBarIcon: () =>(
             <SimpleLineIcons name='handbag' color={activecolor==='2' ? 'white' : 'grey'} size={20}/>
             ),
-            tabBarShowLabel:false,
+            
             
         }}
         /> 
-        <Tab.Screen name='Wishlist' component={Wishlist}/> 
+        <Tab.Screen name='Wishlist' component={Wishlist}
+        options={{
+          tabBarIcon:()=>(
+            <AntDesign name='hearto' size={20} color={'grey'}/>
+          )
+        }}
+        
+        /> 
         {/* <Tab.Screen name='Profile' component={}/>  */}
     </Tab.Navigator>
   )
@@ -53,6 +61,9 @@ const styles = StyleSheet.create({
     backgroundColor:'black',
     marginBottom:10,
     marginHorizontal:30,
-    borderRadius:30
+    borderRadius:30,
+    height:70,
+    
+
   }
 })

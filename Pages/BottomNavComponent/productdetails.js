@@ -102,7 +102,7 @@ export default function Productdetails() {
             {SizeList.map(item => {
               return (
                 <TouchableOpacity key={item.id} style={styles.sizes}>
-                  <Text>{item.name}</Text>
+                  <Text style={styles.sizetxt2}>{item.name}</Text>
                 </TouchableOpacity>
               );
             })}
@@ -198,4 +198,9 @@ const styles = StyleSheet.create({
     padding: 15,
     marginLeft: 10,
   },
+  sizetxt2:{
+    color:'black',
+    fontSize:15,
+    
+  }
 });
