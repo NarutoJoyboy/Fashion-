@@ -7,6 +7,8 @@ import Feather from "react-native-vector-icons/Feather"
 import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons"
 import Wishlist from './Wishlist';
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import Profile from './Profile';
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 
 export default function BottomNavigation() {
 
@@ -52,7 +54,13 @@ export default function BottomNavigation() {
         }}
         
         /> 
-        {/* <Tab.Screen name='Profile' component={}/>  */}
+        <Tab.Screen name='Profile' component={Profile}
+        options={{
+          tabBarIcon:()=>(
+            <MaterialCommunityIcons name='account-circle-outline' size={25} color={'grey'}/>
+          )
+        }}
+        /> 
     </Tab.Navigator>
   )
 }
