@@ -1,18 +1,19 @@
 import { View, Text, TouchableOpacity, StyleSheet, Image, Dimensions, ScrollView  } from 'react-native'
 import React from 'react'
 import AntDesign from "react-native-vector-icons/AntDesign";
+import { useNavigation } from '@react-navigation/native';
 
 export default function Profile() {
     const Width = Dimensions.get('window').width;
-
+    const navigation = useNavigation();
     const Component = [
       {image: require('../Images/Profilecompimages/info-sign.png'), title:'Your Profile', id:1},
       {image: require('../Images/Profilecompimages/credit-card.png'), title:'Payment Methods', id:2},
-      {image: require('../Images/Profilecompimages/settings.png'), title:'My Orders', id:3},
+      {image: require('../Images/Profilecompimages/to-do-list.png'), title:'My Orders', id:3},
       {image: require('../Images/Profilecompimages/settings.png'), title:'Setting', id:4},
-      {image: require('../Images/Profilecompimages/settings.png'), title:'Help Center', id:5},
-      {image: require('../Images/Profilecompimages/settings.png'), title:'Privacy Policy', id:6},
-      {image: require('../Images/Profilecompimages/settings.png'), title:'Invite Friends', id:7},
+      {image: require('../Images/Profilecompimages/information.png'), title:'Help Center', id:5},
+      {image: require('../Images/Profilecompimages/padlock.png'), title:'Privacy Policy', id:6},
+      {image: require('../Images/Profilecompimages/user.png'), title:'Invite Friends', id:7},
       {image: require('../Images/Profilecompimages/login.png'), title:'Log Out', id:8},
     ]
   return (
@@ -55,12 +56,15 @@ export default function Profile() {
           <View>
             {Component.map((item)=>{
               return(
-                <View key={item.id} style={styles.listitem}>
+                <View >
+                  <TouchableOpacity key={item.id} style={styles.listitem}>
                   <View style={styles.iconslist}>
                   <Image source={item.image} style={styles.icons}/>
                   <Text style={styles.listitemtxt}>{item.title}</Text>
                   </View>
                   <AntDesign name='right' color={'black'} size={20}/>
+                  </TouchableOpacity>
+                  <View style={styles.line}/>
                 </View>
               )
             })}
@@ -100,26 +104,34 @@ const styles = StyleSheet.create({
         color:'black',
         textAlign:'center',
         marginTop:10,
+        marginBottom:20
       },
       icons:{
-        width:20,
-        height:20,
+        width:30,
+        height:30,
+        
       },
       listitem:{
         flexDirection:'row',
         justifyContent:'space-between',
         margin:10,
-        borderBottomWidth:0.5,
-        borderColor:'grey'
+        paddingBottom:20,
+        alignItems:'center'
       },
       listitemtxt:{
         color:'black',
-        fontSize:18,
+        fontSize:20,
+        paddingLeft:10
 
       },
       iconslist:{
         flexDirection:'row',
+        alignItems:'center'
 
+      },
+      line:{
+        color:'grey',
+        borderWidth:0.2
       }
 
 })

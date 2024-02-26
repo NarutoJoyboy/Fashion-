@@ -46,7 +46,6 @@ export default function Productdetails() {
 
   return (
     <View style={styles.container}>
-    <ScrollView >
       <View style={styles.header}>
         <TouchableOpacity
           style={styles.button1}
@@ -59,11 +58,12 @@ export default function Productdetails() {
         </TouchableOpacity>
       </View>
 
+    <ScrollView >
       <View>
         <Carousel
           width={Width}
           height={Height / 2}
-          style={{borderWidth: 1}}
+          // style={{borderWidth: 1}}
           data={Photos}
           renderItem={({item}) => {
             return (
@@ -157,7 +157,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     margin: 10,
     alignItems: 'center',
-    borderWidth: 1,
   },
   button1: {
     borderWidth: 1,
