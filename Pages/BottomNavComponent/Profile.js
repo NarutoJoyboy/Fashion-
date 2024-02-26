@@ -2,19 +2,20 @@ import { View, Text, TouchableOpacity, StyleSheet, Image, Dimensions, ScrollView
 import React from 'react'
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { useNavigation } from '@react-navigation/native';
+import Setting from '../Images/ProfileParts/Setting';
 
 export default function Profile() {
     const Width = Dimensions.get('window').width;
     const navigation = useNavigation();
     const Component = [
-      {image: require('../Images/Profilecompimages/info-sign.png'), title:'Your Profile', id:1},
-      {image: require('../Images/Profilecompimages/credit-card.png'), title:'Payment Methods', id:2},
-      {image: require('../Images/Profilecompimages/to-do-list.png'), title:'My Orders', id:3},
-      {image: require('../Images/Profilecompimages/settings.png'), title:'Setting', id:4},
-      {image: require('../Images/Profilecompimages/information.png'), title:'Help Center', id:5},
-      {image: require('../Images/Profilecompimages/padlock.png'), title:'Privacy Policy', id:6},
-      {image: require('../Images/Profilecompimages/user.png'), title:'Invite Friends', id:7},
-      {image: require('../Images/Profilecompimages/login.png'), title:'Log Out', id:8},
+      {image: require('../Images/Profilecompimages/info-sign.png'), title:'Your Profile', id:1, navigation: navigation.navigate()},
+      {image: require('../Images/Profilecompimages/credit-card.png'), title:'Payment Methods', id:2, navigation: navigation.navigate()},
+      {image: require('../Images/Profilecompimages/to-do-list.png'), title:'My Orders', id:3, navigation: navigation.navigate()},
+      {image: require('../Images/Profilecompimages/settings.png'), title:'Setting', id:4, navigation: navigation.navigate(Setting)},
+      {image: require('../Images/Profilecompimages/information.png'), title:'Help Center', id:5, navigation: navigation.navigate()},
+      {image: require('../Images/Profilecompimages/padlock.png'), title:'Privacy Policy', id:6, navigation: navigation.navigate()},
+      {image: require('../Images/Profilecompimages/user.png'), title:'Invite Friends', id:7, navigation: navigation.navigate()},
+      {image: require('../Images/Profilecompimages/login.png'), title:'Log Out', id:8, navigation: navigation.navigate()},
     ]
   return (
     <View style={styles.container}>
@@ -115,7 +116,7 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
         margin:10,
-        paddingBottom:20,
+        
         alignItems:'center'
       },
       listitemtxt:{
@@ -131,7 +132,10 @@ const styles = StyleSheet.create({
       },
       line:{
         color:'grey',
-        borderWidth:0.2
+        borderBottomWidth:0.2,
+        marginBottom:10,
+        marginHorizontal:10,
+        
       }
 
 })
