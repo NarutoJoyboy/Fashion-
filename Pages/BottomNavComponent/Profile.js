@@ -3,19 +3,25 @@ import React from 'react'
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { useNavigation } from '@react-navigation/native';
 import Setting from '../Images/ProfileParts/Setting';
+// import Help_Center from '../Images/ProfileParts/Help_Center';
+// import MyOrders from '../Images/ProfileParts/MyOrders';
+// import Payment_Methods from '../Images/ProfileParts/Payment_Methods';
+// import invite_friends from '../Images/ProfileParts/invite_friends';
+// import Privacy_Policy from '../Images/ProfileParts/Privacy_Policy';
+// import EditProfile from '../Images/ProfileParts/EditProfile';
 
 export default function Profile() {
     const Width = Dimensions.get('window').width;
     const navigation = useNavigation();
     const Component = [
-      {image: require('../Images/Profilecompimages/info-sign.png'), title:'Your Profile', id:1, navigation: navigation.navigate()},
-      {image: require('../Images/Profilecompimages/credit-card.png'), title:'Payment Methods', id:2, navigation: navigation.navigate()},
-      {image: require('../Images/Profilecompimages/to-do-list.png'), title:'My Orders', id:3, navigation: navigation.navigate()},
+      // {image: require('../Images/Profilecompimages/info-sign.png'), title:'Your Profile', id:1, navigation: navigation.navigate(EditProfile)},
+      // {image: require('../Images/Profilecompimages/credit-card.png'), title:'Payment Methods', id:2, navigation: navigation.navigate(Payment_Methods)},
+      // {image: require('../Images/Profilecompimages/to-do-list.png'), title:'My Orders', id:3, navigation: navigation.navigate(MyOrders)},
       {image: require('../Images/Profilecompimages/settings.png'), title:'Setting', id:4, navigation: navigation.navigate(Setting)},
-      {image: require('../Images/Profilecompimages/information.png'), title:'Help Center', id:5, navigation: navigation.navigate()},
-      {image: require('../Images/Profilecompimages/padlock.png'), title:'Privacy Policy', id:6, navigation: navigation.navigate()},
-      {image: require('../Images/Profilecompimages/user.png'), title:'Invite Friends', id:7, navigation: navigation.navigate()},
-      {image: require('../Images/Profilecompimages/login.png'), title:'Log Out', id:8, navigation: navigation.navigate()},
+      // {image: require('../Images/Profilecompimages/information.png'), title:'Help Center', id:5, navigation: navigation.navigate(Help_Center)},
+      // {image: require('../Images/Profilecompimages/padlock.png'), title:'Privacy Policy', id:6, navigation: navigation.navigate(Privacy_Policy)},
+      // {image: require('../Images/Profilecompimages/user.png'), title:'Invite Friends', id:7, navigation: navigation.navigate(invite_friends)},
+      // {image: require('../Images/Profilecompimages/login.png'), title:'Log Out', id:8, navigation: navigation.goBack()},
     ]
   return (
     <View style={styles.container}>

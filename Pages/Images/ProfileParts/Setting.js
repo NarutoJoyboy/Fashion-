@@ -1,13 +1,15 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, Image, Dimensions } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
+import AntDesign from "react-native-vector-icons/AntDesign"
 
 export default function Setting() {
     const navigation = useNavigation();
+    const Width = Dimensions.get('window').width;
     const list =[
-        {image:require('../Profilecompimages/'), id:1, title:'Notification Settings'},
-        {image:require('../Profilecompimages/'), id:1, title:'Password Manager'},
-        {image:require('../Profilecompimages/'), id:1, title:'Delete Account'},
+        {image:require('../Profilecompimages/login.png'), id:1, name:'Notification Settings' },
+        {image:require('../Profilecompimages/login.png'), id:2, name:'Password Manager' },
+        {image:require('../Profilecompimages/login.png'), id:3, name:'Delete Account' },
 
     ]
   return (
@@ -26,3 +28,21 @@ export default function Setting() {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'white',
+    flex: 1,
+  },
+  header: {
+    flexDirection: 'row',
+    margin: 10,
+    alignItems: 'center',
+    borderWidth: 1,
+  },
+  button1: {
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 30,
+  },
+})

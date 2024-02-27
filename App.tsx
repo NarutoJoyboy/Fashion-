@@ -13,6 +13,9 @@ import ProfileComplete from './Pages/ProfileComplete';
 import Home from './Pages/BottomNavComponent/Home';
 import BottomNavigation from './Pages/BottomNavComponent/BottomNavigation';
 import Productdetails from './Pages/BottomNavComponent/productdetails';
+import EditProfile from './Pages/Images/ProfileParts/EditProfile';
+import Payment_Methods from './Pages/Images/ProfileParts/Payment_Methods';
+import Setting from './Pages/Images/ProfileParts/Setting';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -37,6 +40,10 @@ export default function App() {
         <Stack.Screen name='ProfileComplete' component={ProfileComplete}/> */}
         <Stack.Screen name='MainScreens' component={MainScreens}/>
         <Stack.Screen name='Productdetails' component={Productdetails}/>
+        <Stack.Screen name='EditProile' component={EditProfile}/>
+        <Stack.Screen name='PaymentMethods' component={Payment_Methods}/>
+        <Stack.Screen name='Setting' component={Setting}/>
+
       </Stack.Navigator>
     </NavigationContainer>
   );
