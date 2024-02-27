@@ -8,7 +8,7 @@ import {
   ScrollView,
   StyleSheet
 } from 'react-native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import Carousel from 'react-native-reanimated-carousel';
@@ -26,6 +26,12 @@ export default function Home() {
     {title: 'Shyam', image: require('../Images/3.jpg')},
     {title: 'Shyam', image: require('../Images/4.png')},
   ];
+
+  // useEffect(()=>{
+  //   <Carousel 
+  //   autoPlay={true}
+  //   />
+  // })
 
   return (
     <ScrollView style={styles.container}>
@@ -94,8 +100,8 @@ export default function Home() {
           loop
           width={Width / 1.3}
           height={Height/3}
-          // autoPlay={true}
-          // scrollAnimationDuration={2000}
+          // autoPlay={onF}
+          scrollAnimationDuration={2000}
           data={Images}
           onSnapToItem={(index) => console.log('current index:', index)}
           renderItem={({index, item}) => (

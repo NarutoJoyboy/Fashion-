@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, StyleSheet, Image, Dimensions } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, Image, Dimensions, ScrollView } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import AntDesign from "react-native-vector-icons/AntDesign"
@@ -6,14 +6,14 @@ import AntDesign from "react-native-vector-icons/AntDesign"
 export default function Setting() {
     const navigation = useNavigation();
     const Width = Dimensions.get('window').width;
-    const list =[
+    const list = [
         {image:require('../Profilecompimages/login.png'), id:1, name:'Notification Settings' },
         {image:require('../Profilecompimages/login.png'), id:2, name:'Password Manager' },
-        {image:require('../Profilecompimages/login.png'), id:3, name:'Delete Account' },
+        {image:require('../Profilecompimages/user.png'), id:3, name:'Delete Account' },
 
     ]
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity
           style={styles.button1}
@@ -22,6 +22,22 @@ export default function Setting() {
         </TouchableOpacity>
         <Text style={[styles.profiletxt, {marginLeft:Width/4}]}>Profile</Text>
       </View>
+      <ScrollView>
+        {list.map((item)=>{
+           return(
+            <View key={item.id}>
+              <TouchableOpacity  style={styles.listitem} >
+              <View style={styles.iconslist}>
+              <Image source={item.image} style={styles.icons}/>
+              <Text style={styles.listitemtxt}>{item.name}</Text>
+              </View>
+              <AntDesign name='right' color={'black'} size={20}/>
+              </TouchableOpacity>
+              <View style={styles.line}/>
+            </View>
+          )
+        })}
+      </ScrollView>
       <View>
 
       </View>
@@ -33,16 +49,51 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     flex: 1,
+    padding:10,
   },
   header: {
     flexDirection: 'row',
-    margin: 10,
+    marginVertical: 10,
     alignItems: 'center',
-    borderWidth: 1,
+    marginBottom:50
+    
   },
   button1: {
     borderWidth: 1,
     padding: 10,
     borderRadius: 30,
+  },
+  profiletxt:{
+    fontSize:30,
+    color:'black',
+  },
+  listitem:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    marginVertical:10,
+    alignItems:'center',
+    marginBottom:10,
+  },
+  listitemtxt:{
+    color:'black',
+    fontSize:20,
+    paddingLeft:10,
+  },
+  iconslist:{
+    flexDirection:'row',
+    alignItems:'center'
+
+  },
+  line:{
+    color:'grey',
+    borderBottomWidth:0.2,
+    marginBottom:20,
+    
+    
+  },
+  icons:{
+    width:22,
+    height:22,
+    
   },
 })

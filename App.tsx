@@ -14,7 +14,7 @@ import Home from './Pages/BottomNavComponent/Home';
 import BottomNavigation from './Pages/BottomNavComponent/BottomNavigation';
 import Productdetails from './Pages/BottomNavComponent/productdetails';
 import EditProfile from './Pages/Images/ProfileParts/EditProfile';
-import Payment_Methods from './Pages/Images/ProfileParts/Payment_Methods';
+import PaymentMethods from './Pages/Images/ProfileParts/Payment_Methods';
 import Setting from './Pages/Images/ProfileParts/Setting';
 
 export default function App() {
@@ -41,7 +41,7 @@ export default function App() {
         <Stack.Screen name='MainScreens' component={MainScreens}/>
         <Stack.Screen name='Productdetails' component={Productdetails}/>
         <Stack.Screen name='EditProile' component={EditProfile}/>
-        <Stack.Screen name='PaymentMethods' component={Payment_Methods}/>
+        <Stack.Screen name='PaymentMethods' component={PaymentMethods}/>
         <Stack.Screen name='Setting' component={Setting}/>
 
       </Stack.Navigator>

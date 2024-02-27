@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import Setting from '../Images/ProfileParts/Setting';
 // import Help_Center from '../Images/ProfileParts/Help_Center';
 // import MyOrders from '../Images/ProfileParts/MyOrders';
-// import Payment_Methods from '../Images/ProfileParts/Payment_Methods';
+import PaymentMethods from '../Images/ProfileParts/Payment_Methods';
 // import invite_friends from '../Images/ProfileParts/invite_friends';
 // import Privacy_Policy from '../Images/ProfileParts/Privacy_Policy';
 // import EditProfile from '../Images/ProfileParts/EditProfile';
@@ -15,12 +15,12 @@ export default function Profile() {
     const navigation = useNavigation();
     const Component = [
       // {image: require('../Images/Profilecompimages/info-sign.png'), title:'Your Profile', id:1, navigation: navigation.navigate(EditProfile)},
-      // {image: require('../Images/Profilecompimages/credit-card.png'), title:'Payment Methods', id:2, navigation: navigation.navigate(Payment_Methods)},
+      {image: require('../Images/Profilecompimages/credit-card.png'), title:'Payment Methods', id:2, navigate:'PaymentMethods'},
       // {image: require('../Images/Profilecompimages/to-do-list.png'), title:'My Orders', id:3, navigation: navigation.navigate(MyOrders)},
-      {image: require('../Images/Profilecompimages/settings.png'), title:'Setting', id:4, navigation: navigation.navigate(Setting)},
-      // {image: require('../Images/Profilecompimages/information.png'), title:'Help Center', id:5, navigation: navigation.navigate(Help_Center)},
-      // {image: require('../Images/Profilecompimages/padlock.png'), title:'Privacy Policy', id:6, navigation: navigation.navigate(Privacy_Policy)},
-      // {image: require('../Images/Profilecompimages/user.png'), title:'Invite Friends', id:7, navigation: navigation.navigate(invite_friends)},
+      {image: require('../Images/Profilecompimages/settings.png'), title:'Setting', id:4, navigate: 'Setting'},
+      // {image: require('../Images/Profilecompimages/information.png'), title:'Help Center', id:5, navigation: 'Help_Center'},
+      // {image: require('../Images/Profilecompimages/padlock.png'), title:'Privacy Policy', id:6, navigation: 'Privacy_Policy'},
+      // {image: require('../Images/Profilecompimages/user.png'), title:'Invite Friends', id:7, navigation: 'invite_friends'},
       // {image: require('../Images/Profilecompimages/login.png'), title:'Log Out', id:8, navigation: navigation.goBack()},
     ]
   return (
@@ -63,8 +63,8 @@ export default function Profile() {
           <View>
             {Component.map((item)=>{
               return(
-                <View >
-                  <TouchableOpacity key={item.id} style={styles.listitem}>
+                <View key={item.id}>
+                  <TouchableOpacity  style={styles.listitem} onPress={()=>navigation.navigate(item.navigate)}>
                   <View style={styles.iconslist}>
                   <Image source={item.image} style={styles.icons}/>
                   <Text style={styles.listitemtxt}>{item.title}</Text>
@@ -88,9 +88,9 @@ const styles = StyleSheet.create({
       },
       header: {
         flexDirection: 'row',
-        margin: 10,
+        marginVertical: 10,
         alignItems: 'center',
-        borderWidth: 1,
+        
       },
       button1: {
         borderWidth: 1,
@@ -114,16 +114,15 @@ const styles = StyleSheet.create({
         marginBottom:20
       },
       icons:{
-        width:30,
-        height:30,
+        width:22,
+        height:22,
         
       },
       listitem:{
         flexDirection:'row',
         justifyContent:'space-between',
         margin:10,
-        
-        alignItems:'center'
+        alignItems:'center',
       },
       listitemtxt:{
         color:'black',
