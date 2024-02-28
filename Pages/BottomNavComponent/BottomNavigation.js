@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, FlatList, Image } from 'react-native'
 import React, { useState } from 'react'
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
-import Home from './Home';
+import Home from './Homelist/Home';
 import Cart from './Cart';
 import Feather from "react-native-vector-icons/Feather"
 import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons"

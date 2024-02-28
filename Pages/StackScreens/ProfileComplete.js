@@ -57,7 +57,7 @@ const Width = Dimensions.get('window').width
       <View style={{alignSelf: 'center'}}>
         <View style={{borderRadius: 50}}>
           <Image
-            source={require('./Images/image10.png')}
+            source={require('../Images/catlisticons/image10.png')}
             style={{width: 120, height: 120, borderRadius: 60}}
           />
         </View>

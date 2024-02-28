@@ -20,11 +20,11 @@ export default function Productdetails() {
   const Height = Dimensions.get('window').height;
 
   const Photos = [
-    {image: require('../Images/4.png'), id: '1'},
-    {image: require('../Images/4.png'), id: '2'},
-    {image: require('../Images/4.png'), id: '3'},
-    {image: require('../Images/4.png'), id: '4'},
-    {image: require('../Images/4.png'), id: '5'},
+    {image: require('../Images/carouselsliderimage/4.png'), id: '1'},
+    {image: require('../Images/carouselsliderimage/4.png'), id: '2'},
+    {image: require('../Images/carouselsliderimage/4.png'), id: '3'},
+    {image: require('../Images/carouselsliderimage/4.png'), id: '4'},
+    {image: require('../Images/carouselsliderimage/4.png'), id: '5'},
   ];
 
   const SizeList = [

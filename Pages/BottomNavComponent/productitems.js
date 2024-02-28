@@ -9,12 +9,12 @@ export default function Productitems() {
     const navigation = useNavigation();
 
     const Products = [
-        {title:'Men', id:'1', image: require('../Images/1.jpg'), },
-        {title:'Women', id:'2', image: require('../Images/1.jpg'), },
-        {title:'Children', id:'3', image: require('../Images/1.jpg'), },
-        {title:'Jacket', id:'4', image: require('../Images/1.jpg'), },
-        {title:'Funcky', id:'5', image: require('../Images/1.jpg'), },
-        {title:'Hoody', id:'6', image: require('../Images/1.jpg'), },
+        {title:'Men', id:'1', image: require('../Images/carouselsliderimage/1.png'), },
+        {title:'Women', id:'2', image: require('../Images/carouselsliderimage/1.jpg'), },
+        {title:'Children', id:'3', image: require('../Images/carouselsliderimage/1.jpg'), },
+        {title:'Jacket', id:'4', image: require('../Images/carouselsliderimage/1.jpg'), },
+        {title:'Funcky', id:'5', image: require('../Images/carouselsliderimage/1.jpg'), },
+        {title:'Hoody', id:'6', image: require('../Images/carouselsliderimage/1.jpg'), },
     ]
 
     return (

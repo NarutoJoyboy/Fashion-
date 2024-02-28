@@ -11,10 +11,10 @@ import {
 import React, {useState} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
-import Setting from '../Images/ProfileParts/Setting';
+import Setting from './ProfileParts/Setting';
 // import Help_Center from '../Images/ProfileParts/Help_Center';
 // import MyOrders from '../Images/ProfileParts/MyOrders';
-import PaymentMethods from '../Images/ProfileParts/Payment_Methods';
+import PaymentMethods from './ProfileParts/Payment_Methods';
 // import invite_friends from '../Images/ProfileParts/invite_friends';
 // import Privacy_Policy from '../Images/ProfileParts/Privacy_Policy';
 // import EditProfile from '../Images/ProfileParts/EditProfile';
@@ -142,7 +142,7 @@ export default function Profile() {
         <View style={{alignSelf: 'center', marginTop: 20}}>
           <View>
             <Image
-              source={require('../Images/4.png')}
+              source={require('../Images/carouselsliderimage/4.png')}
               style={{width: 120, height: 120, borderRadius: 60}}
             />
             <TouchableOpacity

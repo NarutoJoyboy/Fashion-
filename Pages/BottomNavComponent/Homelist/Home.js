@@ -13,28 +13,23 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import Carousel, {Pagination} from 'react-native-reanimated-carousel';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
-import HomeCategory from './HomeCategory';
-import Productitems from './productitems';
+import HomeCategory from '../HomeCategory';
+import Productitems from '../productitems';
 
 export default function Home() {
   const Width = Dimensions.get('window').width;
   const Height = Dimensions.get('window').height;
 
   const Images = [
-    {title: 'Shyam', image: require('../Images/1.jpg')},
-    {title: 'Shyam', image: require('../Images/2.jpg')},
-    {title: 'Shyam', image: require('../Images/3.jpg')},
-    {title: 'Shyam', image: require('../Images/4.png')},
+    {title: 'Shyam', image: require('../../Images/carouselsliderimage/1.png')},
+    {title: 'Shyam', image: require('./../Images/carouselsliderimage/2.png')},
+    {title: 'Shyam', image: require('./../Images/carouselsliderimage/3.jpg')},
+    {title: 'Shyam', image: require('./../Images/carouselsliderimage/4.png')},
   ];
 
   const [activeDotIndex, setactiveDotIndex] = useState(0);
 
   const _carousel = useRef();
-  // useEffect(()=>{
-  //   <Carousel
-  //   autoPlay={true}
-  //   />
-  // })
 
   const CarouselView = () => {
     return (
@@ -62,15 +57,6 @@ export default function Home() {
             </View>
           )}
         />
-        {/* <Pagination
-          CarouselRef={_carousel}
-          activeDotIndex={activeDotIndex}
-          dotsLength={3}
-          dotStyle={{
-            width: 15,
-            backgroundColor: 'orange',
-          }}
-        /> */}
       </View>
     );
   };

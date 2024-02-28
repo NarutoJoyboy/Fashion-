@@ -22,7 +22,7 @@ export default function PaymentMethods() {
         <Text style={styles.txt1}>Credit & Debit Card</Text>
         <TouchableOpacity style={styles.Card}>
           <View style={styles.box}>
-            <Image source={require('../Profilecompimages/credit-card.png')} style={styles.img}/>
+            <Image source={require('../../Images/Profilecompimages/credit-card.png')} style={styles.img}/>
             <Text style={styles.txt2}>Add New Card</Text>
           </View>
           <View>
@@ -34,7 +34,7 @@ export default function PaymentMethods() {
         <Text style={styles.txt1}>More Payment Options</Text>
         <TouchableOpacity style={styles.Card}>
         <View style={styles.box}>
-            <Image source={require('../Profilecompimages/smartphone.png')} style={styles.img}/>
+            <Image source={require('../../Images/Profilecompimages/smartphone.png')} style={styles.img}/>
             <Text style={styles.txt2}>UPI</Text>
           </View>
             <Text style={styles.txt3}>Link</Text>
@@ -42,7 +42,7 @@ export default function PaymentMethods() {
 
         <TouchableOpacity style={styles.Card}>
         <View style={styles.box}>
-            <Image source={require('../Profilecompimages/payment-method.png')} style={styles.img}/>
+            <Image source={require('../../Images/Profilecompimages/payment-method.png')} style={styles.img}/>
             <Text style={styles.txt2}>Cash On Delivery</Text>
           </View>
             <Text style={styles.txt3}>Link</Text>

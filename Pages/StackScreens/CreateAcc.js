@@ -12,63 +12,7 @@ export default function CreateAccount({navigation}) {
     const [Vieww, setVieww] = useState(false)
     const [ischeck, setischeck] = useState(false)
 
-
-    // const [nameCheck, setnameCheck] = useState('')
-    // const [emailEnter, setemailEnter] = useState('')
-    // const[passwordEnter, setpasswordEnter] = useState('')
-
-    // const [nameValid, setnameValid] = useState(false)
-    // const [emailValid, setemailvalid] = useState(false)
-    // const [passwordValid, setpasswordValid] = useState(false)
-
-
-    // const nameEnteryCheck = (text) => {
-    //     setnameCheck(text);
-        
-    // }
-
-    // const emailEnteryCheck = (text) => {
-    //     setemailEnter(text);
-    //     setemailvalid(text.endsWith("@gmail.com"))
-    // }
-    // const passwordEnteryCheck = (text) => {
-    //     setpasswordEnter(text);
-    //     setpasswordValid(text.length === 10)
-    // }
-
-    // const ValidEntry = () =>{
-    //     if (nameValid && emailValid && passwordValid && ischeck){
-    //         navigation.navigate(Verification_1)
-    //     }
-    //     else {
-    //         Alert.alert('failed to Sign in')
-    //     }
-    // }
-
-    // const createUser = () => {
-    //     if (!emailEnter || !passwordEnter) {
-    //         // Check if email or password is empty or null
-    //         Alert.alert(' Name, Email and password are required');
-    //         return;
-    //       }
-        
-    //     auth()
-    //       .createUserWithEmailAndPassword(emailEnter, passwordEnter)
-    //       .then(() => {
-    //         console.log('User account created & signed in!');
-    //       })
-    //       .catch(error => {
-    //         if (error.code === 'auth/email-already-in-use') {
-    //           console.log('That email address is already in use!');
-    //         }
     
-    //         if (error.code === 'auth/invalid-email') {
-    //           console.log('That email address is invalid!');
-    //         }
-    
-    //         console.error(error);
-    //       });
-    //   };
 
     return (
         <SafeAreaView style={styles.container}>

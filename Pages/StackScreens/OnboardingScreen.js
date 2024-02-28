@@ -45,19 +45,19 @@ export default function OnboardingScreen() {
         pages={[
           {
             backgroundColor: 'white',
-            image: <Image source={require('./Images/image10.png')} style={{width:100, height:300}}/>,
+            image: <Image source={require('../Images/catlisticons/image10.png')} style={{width:100, height:300}}/>,
             title: 'Welcome',
             subtitle: 'my name is Anthony gonsarvis',
           },
           {
             backgroundColor: 'white',
-            image: <Image source={require('./Images/image10.png')}/>,
+            image: <Image source={require('../Images/catlisticons/image10.png')}/>,
             title: 'Welcome',
             subtitle: 'my name is Anthony gonsarvis',
           },
           {
             backgroundColor: 'white',
-            image: <Image source={require('./Images/image10.png')}/>,
+            image: <Image source={require('../Images/catlisticons/image10.png')}/>,
             title: 'Welcome',
             subtitle: 'my name is Anthony gonsarvis',
           },

@@ -7,9 +7,9 @@ export default function Setting() {
     const navigation = useNavigation();
     const Width = Dimensions.get('window').width;
     const list = [
-        {image:require('../Profilecompimages/login.png'), id:1, name:'Notification Settings' },
-        {image:require('../Profilecompimages/login.png'), id:2, name:'Password Manager' },
-        {image:require('../Profilecompimages/user.png'), id:3, name:'Delete Account' },
+        {image:require('../../Images/Profilecompimages/login.png'), id:1, name:'Notification Settings' },
+        {image:require('../../Images/Profilecompimages/login.png'), id:2, name:'Password Manager' },
+        {image:require('../../Images/Profilecompimages/login.png'), id:3, name:'Delete Account' },
 
     ]
   return (

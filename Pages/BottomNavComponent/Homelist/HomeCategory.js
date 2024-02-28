@@ -3,10 +3,10 @@ import React, {useState} from 'react';
 
 export default function HomeCategory() {
   const [catlist, setcatlist] = useState([
-    {icon: require('../Images/t-shirt.png'), name: 'T-shirt', id: '1'},
-    {icon: require('../Images/jeans.png'), name: 'Pant', id: '2'},
-    {icon: require('../Images/dress.png'), name: 'Dress', id: '3'},
-    {icon: require('../Images/jacket.png'), name: 'Jacket', id: '4'},
+    {icon: require('../../Images/catlisticons/t-shirt.png'), name: 'T-shirt', id: '1'},
+    {icon: require('../../Images/catlisticons/jeans.png'), name: 'Pant', id: '2'},
+    {icon: require('../../Images/catlisticons/dress.png'), name: 'Dress', id: '3'},
+    {icon: require('../../Images/catlisticons/jacket.png'), name: 'Jacket', id: '4'},
   ]);
   return (
     <View>
