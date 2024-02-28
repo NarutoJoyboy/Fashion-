@@ -9,11 +9,19 @@ import Wishlist from './Wishlist';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Profile from './Profile';
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
+import Icons from "react-native-vector-icons"
 
 export default function BottomNavigation() {
 
     const Tab = createBottomTabNavigator();
     const [activecolor, setactivecolor] = useState('')
+
+    const list =[
+      {name:'Home', component:Home, id:1, icon : 'home', library:'SimpleLineIcons' },
+      {name:'Cart', component:Cart, id:2, icon : 'handbag', library:'SimpleLineIcons' },
+      {name:'Wishlist', component:Wishlist, id:3, icon : 'hearto', library:'AntDesign' },
+      {name:'Profile', component:Profile, id:4, icon : 'account-circle-outline', library:'MaterialCommunityIcons' },
+    ];
 
   return (
     <Tab.Navigator screenOptions={{
@@ -26,7 +34,33 @@ export default function BottomNavigation() {
       tabStyle:styles.tabs
 
     }}>
-        <Tab.Screen name='Home' component={Home}
+      {
+        list.map((item)=>{
+          return(
+            <Tab.Screen name={item.name} component={item.component} key={item.id}
+            options={{
+              tabBarIcon: () =>(
+                <View style={{backgroundColor:'white', padding:18, borderRadius:30}}>
+                  {item.library==='SimpleLineIcons' &&(
+                    <SimpleLineIcons name={item.icon} color={activecolor==='2' ? 'white' : 'brown'} size={20}/>
+
+                  )} 
+                  {item.library==='AntDesign' &&(
+                    <AntDesign name={item.icon} color={activecolor==='2' ? 'white' : 'brown'} size={20}/>
+
+                  )}
+                  {item.library==='MaterialCommunityIcons' &&(
+                    <MaterialCommunityIcons name={item.icon} color={activecolor==='2' ? 'white' : 'brown'} size={20}/>
+
+                  )}
+                </View>
+              )
+            }}
+            />
+          )
+        })
+      }
+        {/* <Tab.Screen name='Home' component={Home}
         
         options={{
           
@@ -36,18 +70,21 @@ export default function BottomNavigation() {
           ),
           
         }}
-        />
-        <Tab.Screen name='Cart' component={Cart}
+        /> */}
+        {/* <Tab.Screen name='Cart' component={Cart}
         setactivecolor={'2'}
         options={{
           tabBarIcon: () =>(
-            <SimpleLineIcons name='handbag' color={activecolor==='2' ? 'white' : 'grey'} size={20}/>
+            <View style={{backgroundColor:'white', padding:18, borderRadius:30}}>
+
+              <SimpleLineIcons name='handbag' color={activecolor==='2' ? 'white' : 'brown'} size={20}/>
+            </View>
             ),
             
             
         }}
-        /> 
-        <Tab.Screen name='Wishlist' component={Wishlist}
+        />  */}
+        {/* <Tab.Screen name='Wishlist' component={Wishlist}
         options={{
           tabBarIcon:()=>(
             <AntDesign name='hearto' size={20} color={'grey'}/>
@@ -61,7 +98,8 @@ export default function BottomNavigation() {
             <MaterialCommunityIcons name='account-circle-outline' size={25} color={'grey'}/>
           )
         }}
-        /> 
+        />  */}
+        
     </Tab.Navigator>
   )
 }

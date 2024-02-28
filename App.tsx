@@ -43,6 +43,7 @@ export default function App() {
         <Stack.Screen name='EditProile' component={EditProfile}/>
         <Stack.Screen name='PaymentMethods' component={PaymentMethods}/>
         <Stack.Screen name='Setting' component={Setting}/>
+        
 
       </Stack.Navigator>
     </NavigationContainer>

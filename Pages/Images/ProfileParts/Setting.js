@@ -20,7 +20,7 @@ export default function Setting() {
           onPress={() => navigation.goBack()}>
           <AntDesign name="arrowleft" size={23} color={'black'} />
         </TouchableOpacity>
-        <Text style={[styles.profiletxt, {marginLeft:Width/4}]}>Profile</Text>
+        <Text style={[styles.profiletxt, {marginLeft:Width/4}]}>Settings</Text>
       </View>
       <ScrollView>
         {list.map((item)=>{
@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     flex: 1,
-    padding:10,
+    paddingHorizontal:20,
+    paddingVertical:10
   },
   header: {
     flexDirection: 'row',
