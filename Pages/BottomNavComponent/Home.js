@@ -6,12 +6,12 @@ import {
   Dimensions,
   Image,
   ScrollView,
-  StyleSheet
+  StyleSheet,
 } from 'react-native';
-import React, { useEffect } from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
-import Carousel from 'react-native-reanimated-carousel';
+import Carousel, {Pagination} from 'react-native-reanimated-carousel';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import HomeCategory from './HomeCategory';
 import Productitems from './productitems';
@@ -27,14 +27,56 @@ export default function Home() {
     {title: 'Shyam', image: require('../Images/4.png')},
   ];
 
+  const [activeDotIndex, setactiveDotIndex] = useState(0);
+
+  const _carousel = useRef();
   // useEffect(()=>{
-  //   <Carousel 
+  //   <Carousel
   //   autoPlay={true}
   //   />
   // })
 
+  const CarouselView = () => {
+    return (
+      <View>
+        <Carousel
+          loop
+          width={Width / 1.3}
+          height={Height / 3}
+          ref={_carousel}
+          // autoPlay={onF}
+          scrollAnimationDuration={2000}
+          data={Images}
+          onSnapToItem={index => console.log('current index:', index)}
+          renderItem={({index, item}) => (
+            <View style={{borderWidth: 1}}>
+              <Image
+                source={item.image}
+                style={{
+                  width: Width / 1.3,
+                  height: Height / 3.5,
+                  borderRadius: 20,
+                  resizeMode: 'contain',
+                }}
+              />
+            </View>
+          )}
+        />
+        {/* <Pagination
+          CarouselRef={_carousel}
+          activeDotIndex={activeDotIndex}
+          dotsLength={3}
+          dotStyle={{
+            width: 15,
+            backgroundColor: 'orange',
+          }}
+        /> */}
+      </View>
+    );
+  };
+
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView>
       <View
         style={{
           flexDirection: 'row',
@@ -96,37 +138,18 @@ export default function Home() {
       </View>
 
       <View style={{alignSelf: 'center'}}>
-        <Carousel
-          loop
-          width={Width / 1.3}
-          height={Height/3}
-          // autoPlay={onF}
-          scrollAnimationDuration={2000}
-          data={Images}
-          onSnapToItem={(index) => console.log('current index:', index)}
-          renderItem={({index, item}) => (
-            <View style={{borderWidth:1}}>
-              <Image
-                source={item.image}
-                style={{width: Width / 1.3, height: Height / 3.5, borderRadius:20, resizeMode:'contain'}}
-              />
-            </View>
-          )}
-        />
+        <CarouselView />
       </View>
       <View>
         <HomeCategory />
       </View>
-            <View>
-              <Productitems/>
-            </View>
+      <View>
+        <Productitems />
+      </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container:{
-    backgroundColor:'white',
-    
-  }
-})
+  
+});

@@ -15,7 +15,7 @@ const Width = Dimensions.get('window').width
   const Number = ['+1', '+2', '+3', '+91', '+92', '+107', '+203', ]
 
   return (
-    <View style={{backgroundColor: 'white', flex: 1}}>
+    <View style={{ flex: 1}}>
       <View>
         <TouchableOpacity
           style={{

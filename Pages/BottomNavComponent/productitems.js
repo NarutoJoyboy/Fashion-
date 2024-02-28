@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import Productdetails from './productdetails';
@@ -22,7 +22,7 @@ export default function Productitems() {
       {Products.map((item) =>{
         return(
             <View key={item.id} style={styles.box}>
-                <TouchableOpacity style={styles.opacity} onPress={()=>navigation.navigate(Productdetails)}> 
+                <TouchableOpacity style={styles.opacity} onPress={()=>[navigation.navigate(Productdetails)]}> 
                 <Image source={item.image} style={styles.img}/>
                 <Text style={styles.txt}>{item.title}</Text>
                 </TouchableOpacity>

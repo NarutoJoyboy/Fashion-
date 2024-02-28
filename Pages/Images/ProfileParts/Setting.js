@@ -47,7 +47,6 @@ export default function Setting() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
     flex: 1,
     paddingHorizontal:20,
     paddingVertical:10

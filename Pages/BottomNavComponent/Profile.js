@@ -203,13 +203,14 @@ export default function Profile() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
     flex: 1,
+    
   },
   header: {
     flexDirection: 'row',
     marginVertical: 10,
     alignItems: 'center',
+    marginHorizontal:10,
   },
   button1: {
     borderWidth: 1,

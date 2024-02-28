@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, FlatList } from 'react-native'
+import { View, Text, StyleSheet, FlatList, Image } from 'react-native'
 import React, { useState } from 'react'
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import Home from './Home';
@@ -20,7 +20,7 @@ export default function BottomNavigation() {
       {name:'Home', component:Home, id:1, icon : 'home', library:'SimpleLineIcons' },
       {name:'Cart', component:Cart, id:2, icon : 'handbag', library:'SimpleLineIcons' },
       {name:'Wishlist', component:Wishlist, id:3, icon : 'hearto', library:'AntDesign' },
-      {name:'Profile', component:Profile, id:4, icon : 'account-circle-outline', library:'MaterialCommunityIcons' },
+      {name:'Profile', component:Profile, id:4, icon : require('../Images/Profilecompimages/user_big.png'), library:'MaterialCommunityIcons' },
     ];
 
   return (
@@ -28,10 +28,12 @@ export default function BottomNavigation() {
       headerShown:false, 
       tabBarStyle:styles.tabStyle,
       initialRouteName:"Home",
-      tabBarActiveTintColor:'white',
-      tabBarInactiveTintColor:'grey',
+      tabBarActiveColor:'white',
+      tabBarInactiveColor:'grey',
       tabBarShowLabel:false,
-      tabStyle:styles.tabs
+      tabStyle:styles.tabs,
+      tabBarActiveBackgroundColor: 'red',
+      
 
     }}>
       {
@@ -50,11 +52,13 @@ export default function BottomNavigation() {
 
                   )}
                   {item.library==='MaterialCommunityIcons' &&(
-                    <MaterialCommunityIcons name={item.icon} color={activecolor==='2' ? 'white' : 'brown'} size={20}/>
+                    <Image source={item.icon} style={{width:20, height:20,
+                    tintColor:'brown', padding:10}}/>
 
                   )}
                 </View>
-              )
+              ),
+              
             }}
             />
           )
@@ -111,6 +115,7 @@ const styles = StyleSheet.create({
     marginHorizontal:30,
     borderRadius:30,
     height:70,
+    
     
     
 
