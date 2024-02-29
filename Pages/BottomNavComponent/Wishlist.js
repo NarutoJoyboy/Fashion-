@@ -162,7 +162,7 @@ export default function Wishlist() {
                   style={{width: 170, height: 170, borderRadius: 10, resizeMode:'cover', marginBottom:10, }}
                 />
                 <TouchableOpacity style={{padding:10, borderRadius:30, backgroundColor:'white', alignSelf:'flex-end', position:'absolute', right:0,  }}>
-                  <AntDesign name='heart' size={20} color={'brown'}/>
+                  <AntDesign name='heart' size={20} color={'#704F38'}/>
                 </TouchableOpacity>
                 <View
                   style={{

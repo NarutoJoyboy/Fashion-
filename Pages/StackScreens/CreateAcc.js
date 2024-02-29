@@ -61,7 +61,7 @@ export default function CreateAccount({navigation}) {
                 </View>
                 <View style={styles.contain5}>
                     <TouchableOpacity onPress={()=>setischeck(!ischeck)} style={{paddingRight:10}}>
-                        <Feather name={ischeck ? 'check-square': 'square'} size={23} color={ischeck ? 'brown': 'grey'} />
+                        <Feather name={ischeck ? 'check-square': 'square'} size={23} color={ischeck ? '#704F38': 'grey'} />
                     </TouchableOpacity>
                     <Text style={styles.txt8}>Agree with </Text>
                 <TouchableOpacity>
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
 
     },
     button1: {
-        backgroundColor: 'brown',
+        backgroundColor: '#704F38',
         borderRadius: 20,
         marginTop: 30,
 
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
         fontSize:15,
     },
     txt7:{
-        color: 'brown',
+        color: '#704F38',
         textDecorationLine: 'underline',
         fontSize: 15,
     },

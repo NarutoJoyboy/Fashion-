@@ -102,7 +102,7 @@ export default function NewPassword() {
 
       <TouchableOpacity
         style={{
-          backgroundColor: 'brown',
+          backgroundColor: '#704F38',
           marginHorizontal: 30,
           borderRadius: 40,
           marginTop: 30,

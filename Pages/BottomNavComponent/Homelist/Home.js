@@ -73,7 +73,7 @@ export default function Home() {
         <View style={{marginHorizontal: 10}}>
           <Text>Location</Text>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <MaterialIcons name="location-on" size={30} color={'brown'} />
+            <MaterialIcons name="location-on" size={30} color={'#704F38'} />
             <Text style={{fontSize: 15, color: 'black'}}>City, </Text>
             <Text style={{fontSize: 15, color: 'black'}}>Country</Text>
             <TouchableOpacity>
@@ -113,7 +113,7 @@ export default function Home() {
         </View>
         <TouchableOpacity
           style={{
-            backgroundColor: 'brown',
+            backgroundColor: '#704F38',
             alignSelf: 'center',
             padding: 10,
             borderRadius: 20,

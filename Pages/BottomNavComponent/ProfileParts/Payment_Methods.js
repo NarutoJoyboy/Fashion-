@@ -96,8 +96,8 @@ const styles = StyleSheet.create({
   img:{
     width:30,
     height:30,
-    tintColor:'brown',
-    // backgroundColor:'brown',
+    tintColor:'#704F38',
+    // backgroundColor:'#704F38',
     // borderRadius:10
     
   },
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
 
   },
   txt3:{
-    color:'brown',
+    color:'#704F38',
 
   }
   

@@ -44,16 +44,16 @@ export default function BottomNavigation() {
               tabBarIcon: () =>(
                 <View style={{backgroundColor:'white', padding:18, borderRadius:30}}>
                   {item.library==='SimpleLineIcons' &&(
-                    <SimpleLineIcons name={item.icon} color={activecolor==='2' ? 'white' : 'brown'} size={20}/>
+                    <SimpleLineIcons name={item.icon} color={activecolor==='2' ? 'white' : '#704F38'} size={20}/>
 
                   )} 
                   {item.library==='AntDesign' &&(
-                    <AntDesign name={item.icon} color={activecolor==='2' ? 'white' : 'brown'} size={20}/>
+                    <AntDesign name={item.icon} color={activecolor==='2' ? 'white' : '#704F38'} size={20}/>
 
                   )}
                   {item.library==='MaterialCommunityIcons' &&(
                     <Image source={item.icon} style={{width:20, height:20,
-                    tintColor:'brown', padding:10}}/>
+                    tintColor:'#704F38', padding:10}}/>
 
                   )}
                 </View>
@@ -81,7 +81,7 @@ export default function BottomNavigation() {
           tabBarIcon: () =>(
             <View style={{backgroundColor:'white', padding:18, borderRadius:30}}>
 
-              <SimpleLineIcons name='handbag' color={activecolor==='2' ? 'white' : 'brown'} size={20}/>
+              <SimpleLineIcons name='handbag' color={activecolor==='2' ? 'white' : '#704F38'} size={20}/>
             </View>
             ),
             

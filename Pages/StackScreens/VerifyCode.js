@@ -21,7 +21,7 @@ export default function VerifyCode() {
           Please enter the code just sent to email
         </Text>
 
-        <Text style={{fontSize: 17, color: 'brown', textAlign: 'center'}}>
+        <Text style={{fontSize: 17, color: '#704F38', textAlign: 'center'}}>
           example@gmail.com
         </Text>
       </View>
@@ -43,7 +43,7 @@ export default function VerifyCode() {
         <TouchableOpacity>
           <Text
             style={{
-              color: 'brown',
+              color: '#704F38',
               fontSize: 16,
               textAlign: 'center',
               textDecorationLine: 'underline',
@@ -54,7 +54,7 @@ export default function VerifyCode() {
       </View>
       <TouchableOpacity
         style={{
-          backgroundColor: 'brown',
+          backgroundColor: '#704F38',
           marginHorizontal: 30,
           borderRadius: 40,
           marginTop: 30,

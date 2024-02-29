@@ -41,7 +41,7 @@ export default function Productdetails() {
     {color: 'black', id: 3},
     {color: 'green', id: 4},
     {color: 'blue', id: 5},
-    {color: 'brown', id: 6},
+    {color: '#704F38', id: 6},
   ];
 
   return (
@@ -136,7 +136,7 @@ export default function Productdetails() {
             <Text style={{fontSize:18, color:'black'}}>$83.57</Text>
         </View>
         <View >
-            <TouchableOpacity style={{backgroundColor:'brown', flexDirection:'row', alignSelf:'center', padding:15, borderRadius:20}}>
+            <TouchableOpacity style={{backgroundColor:'#704F38', flexDirection:'row', alignSelf:'center', padding:15, borderRadius:20}}>
             <Ionicons name='bag' size={25} color={'white'} style={{paddingHorizontal:10}}/>
             <Text style={{color:'white', fontSize:20, paddingHorizontal:15}}>Add to Cart</Text>
 

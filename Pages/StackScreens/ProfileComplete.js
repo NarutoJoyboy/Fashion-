@@ -69,7 +69,7 @@ const Width = Dimensions.get('window').width
             borderRadius: 20,
             position: 'relative',
             bottom: 40,
-            backgroundColor: 'brown',
+            backgroundColor: '#704F38',
             padding: 5,
           }}>
           <AntDesign name="edit" color={'white'} size={25} />
@@ -133,7 +133,7 @@ const Width = Dimensions.get('window').width
 
       <TouchableOpacity
         style={{
-          backgroundColor: 'brown',
+          backgroundColor: '#704F38',
           marginHorizontal: 30,
           borderRadius: 40,
           marginTop: 30,

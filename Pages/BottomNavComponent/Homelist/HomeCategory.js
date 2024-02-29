@@ -20,7 +20,7 @@ export default function HomeCategory() {
         }}>
         <Text style={{fontSize:22, color:'black', }}>Category</Text>
         <TouchableOpacity>
-          <Text style={{fontSize:15, color:'brown', }}>Seel All</Text>
+          <Text style={{fontSize:15, color:'#704F38', }}>Seel All</Text>
         </TouchableOpacity>
       </View>
       <View style={{flexDirection: 'row', justifyContent:'space-between', marginHorizontal:30, marginVertical:10}}>
@@ -28,7 +28,7 @@ export default function HomeCategory() {
           return (
             <View key={item.id} style={{alignItems:'center'}}>
               <TouchableOpacity style={{borderRadius: 50, padding:15, backgroundColor:'#E4D2D2'}}>
-                <Image source={item.icon} style={{width: 30, height: 30, tintColor:'brown',}} />
+                <Image source={item.icon} style={{width: 30, height: 30, tintColor:'#704F38',}} />
               </TouchableOpacity>
               <Text style={{fontSize:17, color:'black', marginTop:5}}>{item.name}</Text>
             </View>

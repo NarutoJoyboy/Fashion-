@@ -20,7 +20,7 @@ export default function OnboardingScreen() {
       return(
           
         <View >
-          <TouchableOpacity style={{backgroundColor:'brown', borderRadius:30, padding:10, marginHorizontal:20}} >
+          <TouchableOpacity style={{backgroundColor:'#704F38', borderRadius:30, padding:10, marginHorizontal:20}} >
               <AntDesign name='arrowright' color={'white'} size={25}/>
           </TouchableOpacity>
           </View>

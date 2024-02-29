@@ -34,7 +34,7 @@ export default function WelcomePage() {
       </View>
       <View style={{alignSelf:'center'}}>
         <Text style={{fontSize: 30, color: 'black', textAlign: 'center', textAlign:'center',marginHorizontal:50, marginTop:40}}>
-          The <Text style={{color: 'brown'}}>Fashion App</Text> That Makes You
+          The <Text style={{color: '#704F38'}}>Fashion App</Text> That Makes You
           Look Your Best
         </Text>
         <Text style={{textAlign: 'center', color:'grey', fontSize:17, marginHorizontal:60, marginTop:20}}>
@@ -61,7 +61,7 @@ export default function WelcomePage() {
 
 const styles = StyleSheet.create({
   button1: {
-    backgroundColor: 'brown',
+    backgroundColor: '#704F38',
     margin: 20,
     borderRadius: 20,
     padding: 10,
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   signinoption: {flexDirection: 'row', alignSelf: 'center'},
   signin: {
     fontSize: 18,
-    color: 'brown',
+    color: '#704F38',
     textDecorationLine: 'underline',
   },
   accountoption: {fontSize: 18, color: 'black'},

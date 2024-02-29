@@ -104,22 +104,22 @@ export default function Profile() {
               <TouchableOpacity
                 style={{
                   borderWidth: 1,
-                  borderColor: 'brown',
+                  borderColor: '#704F38',
                   paddingHorizontal: 50,
                   paddingVertical: 10,
                   borderRadius: 20,
                 }}
                 onPress={() => setmodalvisible(false)}>
-                <Text style={{fontSize: 20, color: 'brown'}}>Cancel</Text>
+                <Text style={{fontSize: 20, color: '#704F38'}}>Cancel</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 style={{
                   borderWidth: 1,
-                  borderColor: 'brown',
+                  borderColor: '#704F38',
                   paddingHorizontal: 50,
                   paddingVertical: 10,
                   borderRadius: 20,
-                  backgroundColor: 'brown',
+                  backgroundColor: '#704F38',
                 }}>
                 <Text style={{color: 'white', fontSize: 20}}>Yes, logout</Text>
               </TouchableOpacity>
@@ -158,7 +158,7 @@ export default function Profile() {
                 borderRadius: 20,
                 position: 'absolute',
                 bottom: 0,
-                backgroundColor: 'brown',
+                backgroundColor: '#704F38',
                 padding: 5,
               }}>
               <AntDesign name="edit" color={'white'} size={25} />
