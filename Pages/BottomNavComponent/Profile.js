@@ -19,7 +19,7 @@ import PaymentMethods from './ProfileParts/Payment_Methods';
 // import Privacy_Policy from '../Images/ProfileParts/Privacy_Policy';
 // import EditProfile from '../Images/ProfileParts/EditProfile';
 import {BlurView} from '@react-native-community/blur';
-
+import HelpCenter from './ProfileParts/Help_Center';
 export default function Profile() {
   const Width = Dimensions.get('window').width;
   const navigation = useNavigation();
@@ -38,7 +38,12 @@ export default function Profile() {
       id: 4,
       navigate: 'Setting',
     },
-    // {image: require('../Images/Profilecompimages/information.png'), title:'Help Center', id:5, navigation: 'Help_Center'},
+    {
+      image: require('../Images/Profilecompimages/information.png'),
+      title: 'Help Center',
+      id: 5,
+      navigation: 'HelpCenter',
+    },
     // {image: require('../Images/Profilecompimages/padlock.png'), title:'Privacy Policy', id:6, navigation: 'Privacy_Policy'},
     // {image: require('../Images/Profilecompimages/user.png'), title:'Invite Friends', id:7, navigation: 'invite_friends'},
   ];
@@ -47,10 +52,10 @@ export default function Profile() {
 
   const LogOut = () => {
     return (
-      <Modal transparent={true} visible={modalvisible} animationType='slide'>
-        <BlurView style={{position: 'absolute', bottom: 0, right: 0, left: 0}}
-        animationType='fade'
-        >
+      <Modal transparent={true} visible={modalvisible} animationType="slide">
+        <BlurView
+          style={{position: 'absolute', bottom: 0, right: 0, left: 0}}
+          animationType="fade">
           <View style={{backgroundColor: 'white', justifyContent: 'flex-end'}}>
             <View
               style={{
@@ -104,8 +109,7 @@ export default function Profile() {
                   paddingVertical: 10,
                   borderRadius: 20,
                 }}
-                onPress={()=>setmodalvisible(false)}
-                >
+                onPress={() => setmodalvisible(false)}>
                 <Text style={{fontSize: 20, color: 'brown'}}>Cancel</Text>
               </TouchableOpacity>
               <TouchableOpacity
@@ -127,6 +131,7 @@ export default function Profile() {
   };
 
   return (
+
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity
@@ -204,13 +209,12 @@ export default function Profile() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    
   },
   header: {
     flexDirection: 'row',
     marginVertical: 10,
     alignItems: 'center',
-    marginHorizontal:10,
+    marginHorizontal: 10,
   },
   button1: {
     borderWidth: 1,

@@ -9,7 +9,7 @@ export default function Productitems() {
     const navigation = useNavigation();
 
     const Products = [
-        {title:'Men', id:'1', image: require('../Images/carouselsliderimage/1.png'), },
+        {title:'Men', id:'1', image: require('../Images/carouselsliderimage/1.jpg'), },
         {title:'Women', id:'2', image: require('../Images/carouselsliderimage/1.jpg'), },
         {title:'Children', id:'3', image: require('../Images/carouselsliderimage/1.jpg'), },
         {title:'Jacket', id:'4', image: require('../Images/carouselsliderimage/1.jpg'), },

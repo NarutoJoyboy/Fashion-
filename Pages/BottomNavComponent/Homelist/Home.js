@@ -13,7 +13,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import Carousel, {Pagination} from 'react-native-reanimated-carousel';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
-import HomeCategory from '../HomeCategory';
+import HomeCategory from '../Homelist/HomeCategory';
 import Productitems from '../productitems';
 
 export default function Home() {
@@ -21,10 +21,10 @@ export default function Home() {
   const Height = Dimensions.get('window').height;
 
   const Images = [
-    {title: 'Shyam', image: require('../../Images/carouselsliderimage/1.png')},
-    {title: 'Shyam', image: require('./../Images/carouselsliderimage/2.png')},
-    {title: 'Shyam', image: require('./../Images/carouselsliderimage/3.jpg')},
-    {title: 'Shyam', image: require('./../Images/carouselsliderimage/4.png')},
+    {title: 'Shyam', image: require('../../Images/carouselsliderimage/1.jpg')},
+    {title: 'Shyam', image: require('../../Images/carouselsliderimage/2.jpg')},
+    {title: 'Shyam', image: require('../../Images/carouselsliderimage/3.jpg')},
+    {title: 'Shyam', image: require('../../Images/carouselsliderimage/4.png')},
   ];
 
   const [activeDotIndex, setactiveDotIndex] = useState(0);

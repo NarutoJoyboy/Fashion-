@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Help_Center() {
+export default function HelpCenter() {
   return (
     <View>
-      <Text>Help_Center</Text>
+      <Text></Text>
     </View>
   )
 }
