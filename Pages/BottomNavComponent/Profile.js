@@ -12,7 +12,6 @@ import React, {useState} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
 import Setting from './ProfileParts/Setting';
-// import Help_Center from '../Images/ProfileParts/Help_Center';
 // import MyOrders from '../Images/ProfileParts/MyOrders';
 import PaymentMethods from './ProfileParts/Payment_Methods';
 // import invite_friends from '../Images/ProfileParts/invite_friends';
@@ -42,7 +41,7 @@ export default function Profile() {
       image: require('../Images/Profilecompimages/information.png'),
       title: 'Help Center',
       id: 5,
-      navigation: 'HelpCenter',
+      navigate: 'HelpCenter',
     },
     // {image: require('../Images/Profilecompimages/padlock.png'), title:'Privacy Policy', id:6, navigation: 'Privacy_Policy'},
     // {image: require('../Images/Profilecompimages/user.png'), title:'Invite Friends', id:7, navigation: 'invite_friends'},
