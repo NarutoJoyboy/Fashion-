@@ -63,47 +63,7 @@ export default function BottomNavigation() {
             />
           )
         })
-      }
-        {/* <Tab.Screen name='Home' component={Home}
-        
-        options={{
-          
-          tabBarIcon: () =>(
-              
-              <SimpleLineIcons name='home' color={activecolor==='1' ? 'white' : 'grey'} size={20}/>
-          ),
-          
-        }}
-        /> */}
-        {/* <Tab.Screen name='Cart' component={Cart}
-        setactivecolor={'2'}
-        options={{
-          tabBarIcon: () =>(
-            <View style={{backgroundColor:'white', padding:18, borderRadius:30}}>
-
-              <SimpleLineIcons name='handbag' color={activecolor==='2' ? 'white' : '#704F38'} size={20}/>
-            </View>
-            ),
-            
-            
-        }}
-        />  */}
-        {/* <Tab.Screen name='Wishlist' component={Wishlist}
-        options={{
-          tabBarIcon:()=>(
-            <AntDesign name='hearto' size={20} color={'grey'}/>
-          )
-        }}
-        
-        /> 
-        <Tab.Screen name='Profile' component={Profile}
-        options={{
-          tabBarIcon:()=>(
-            <MaterialCommunityIcons name='account-circle-outline' size={25} color={'grey'}/>
-          )
-        }}
-        />  */}
-        
+      } 
     </Tab.Navigator>
   )
 }

@@ -10,7 +10,7 @@ export default function HelpTopTab() {
   return (
     <Tab.Navigator>
         <Tab.Screen name='FAQ' component={FAQ}/>
-        <Tab.Screen name='Contactus' component={Contactus}/>
+        <Tab.Screen name='Contact Us' component={Contactus}/>
     </Tab.Navigator>
   )
 }

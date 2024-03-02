@@ -1,6 +1,6 @@
 import {View, Text} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import WelcomePage from './Pages/StackScreens/WelcomePage';
 import OnboardingScreen from './Pages/StackScreens/OnboardingScreen';
@@ -21,6 +21,15 @@ import HelpCenter from './Pages/BottomNavComponent/ProfileParts/Help_Center';
 export default function App() {
   const Stack = createNativeStackNavigator();
 
+  const MyTheme ={
+    ...DefaultTheme,
+    colors:{
+      ...DefaultTheme.colors,
+      // primary:'black',
+      background:'white',
+    },
+  };
+
   const MainScreens = () =>{
     return(
     <BottomNavigation/>
@@ -30,7 +39,7 @@ export default function App() {
   
 
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={MyTheme} >
       <Stack.Navigator screenOptions={{headerShown: false}}>
         {/* <Stack.Screen name="Welcome" component={WelcomePage} />
         <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />

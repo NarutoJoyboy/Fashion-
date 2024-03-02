@@ -12,25 +12,25 @@ import React, {useState} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
 import Setting from './ProfileParts/Setting';
-// import MyOrders from '../Images/ProfileParts/MyOrders';
+import MyOrders from './ProfileParts/MyOrders';
 import PaymentMethods from './ProfileParts/Payment_Methods';
-// import invite_friends from '../Images/ProfileParts/invite_friends';
-// import Privacy_Policy from '../Images/ProfileParts/Privacy_Policy';
-// import EditProfile from '../Images/ProfileParts/EditProfile';
+import invite_friends from '../BottomNavComponent/ProfileParts/invite_friends';
+import Privacy_Policy from '../BottomNavComponent/ProfileParts/Privacy_Policy';
+import EditProfile from '../BottomNavComponent/ProfileParts/EditProfile';
 import {BlurView} from '@react-native-community/blur';
 import HelpCenter from './ProfileParts/Help_Center';
 export default function Profile() {
   const Width = Dimensions.get('window').width;
   const navigation = useNavigation();
   const Component = [
-    // {image: require('../Images/Profilecompimages/info-sign.png'), title:'Your Profile', id:1, navigation: navigation.navigate(EditProfile)},
+    {image: require('../Images/Profilecompimages/info-sign.png'), title:'Your Profile', id:1, navigation: 'EditProfile'},
     {
       image: require('../Images/Profilecompimages/credit-card.png'),
       title: 'Payment Methods',
       id: 2,
       navigate: 'PaymentMethods',
     },
-    // {image: require('../Images/Profilecompimages/to-do-list.png'), title:'My Orders', id:3, navigation: navigation.navigate(MyOrders)},
+    {image: require('../Images/Profilecompimages/to-do-list.png'), title:'My Orders', id:3, navigation:'MyOrders'},
     {
       image: require('../Images/Profilecompimages/settings.png'),
       title: 'Setting',
@@ -43,8 +43,8 @@ export default function Profile() {
       id: 5,
       navigate: 'HelpCenter',
     },
-    // {image: require('../Images/Profilecompimages/padlock.png'), title:'Privacy Policy', id:6, navigation: 'Privacy_Policy'},
-    // {image: require('../Images/Profilecompimages/user.png'), title:'Invite Friends', id:7, navigation: 'invite_friends'},
+    {image: require('../Images/Profilecompimages/padlock.png'), title:'Privacy Policy', id:6, navigation: 'Privacy_Policy'},
+    {image: require('../Images/Profilecompimages/user.png'), title:'Invite Friends', id:7, navigation: 'invite_friends'},
   ];
 
   const [modalvisible, setmodalvisible] = useState(false);
@@ -68,7 +68,7 @@ export default function Profile() {
             />
             <Text
               style={{
-                fontSize: 22,
+                fontSize: 20,
                 color: 'black',
                 textAlign: 'center',
                 padding: 10,
@@ -86,7 +86,7 @@ export default function Profile() {
             <Text
               style={{
                 textAlign: 'center',
-                fontSize: 18,
+                fontSize: 15,
                 color: 'grey',
                 marginBottom: 20,
               }}>
@@ -109,18 +109,18 @@ export default function Profile() {
                   borderRadius: 20,
                 }}
                 onPress={() => setmodalvisible(false)}>
-                <Text style={{fontSize: 20, color: '#704F38'}}>Cancel</Text>
+                <Text style={{fontSize: 18, color: '#704F38'}}>Cancel</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 style={{
                   borderWidth: 1,
                   borderColor: '#704F38',
-                  paddingHorizontal: 50,
+                  paddingHorizontal: 40,
                   paddingVertical: 10,
                   borderRadius: 20,
                   backgroundColor: '#704F38',
                 }}>
-                <Text style={{color: 'white', fontSize: 20}}>Yes, logout</Text>
+                <Text style={{color: 'white', fontSize: 18}}>Yes, logout</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
   },
   profiletxt: {
-    fontSize: 30,
+    fontSize: 25,
     color: 'black',
   },
   img: {
@@ -230,7 +230,7 @@ const styles = StyleSheet.create({
     borderRadius: 75,
   },
   usertxt: {
-    fontSize: 23,
+    fontSize: 20,
     color: 'black',
     textAlign: 'center',
     marginTop: 10,
@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
   },
   listitemtxt: {
     color: 'black',
-    fontSize: 20,
+    fontSize: 18,
     paddingLeft: 10,
   },
   iconslist: {

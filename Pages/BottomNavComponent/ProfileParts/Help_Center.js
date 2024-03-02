@@ -22,7 +22,7 @@ export default function HelpCenter() {
         <TextInput
         placeholder='Search'
         placeholderTextColor={'grey'}
-        style={styles.search}
+        style={[styles.searchinput, {width:Width/1.19, paddingLeft:10,marginLeft:10}]}
         />
       </View>
       <View style={{flex:1}}>
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
     borderWidth:1,
     borderRadius:20,
     margin:10,
+    paddingHorizontal:10
     
   }
 })
