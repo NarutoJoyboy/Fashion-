@@ -168,7 +168,7 @@ export default function Wishlist(){
             return (
               <View key={item.id}>
                 <TouchableOpacity
-                  style={[styles.filterButton, {backgroundColor:filter[item.id] ? "white" :'brown' }]}
+                  style={[styles.filterButton, {backgroundColor:filter[item.id] ? "brown" :'white' }]}
                   onPress={()=>togglefilter(item.id)}
                   >
                   <Text style={styles.filterText}>

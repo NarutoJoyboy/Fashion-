@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "454078073463",
+    "project_id": "fashion-75f15",
+    "storage_bucket": "fashion-75f15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454078073463:android:af1e313eba6e19e71c9472",
+        "android_client_info": {
+          "package_name": "com.fashion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACp-2VCJL8DeqOBzA6NGt77O2UzHXK_1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
