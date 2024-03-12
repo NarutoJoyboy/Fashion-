@@ -8,7 +8,6 @@ export default function HomeCategory() {
     { icon: require('../../Images/catlisticons/jeans.png'), name: 'Pant', id: '2' },
     { icon: require('../../Images/catlisticons/dress.png'), name: 'Dress', id: '3' },
     { icon: require('../../Images/catlisticons/jacket.png'), name: 'Jacket', id: '4' },
-    { icon: require('../../Images/catlisticons/jacket.png'), name: 'Shoes', id: '5' },
   ]);
 
   return (
@@ -59,15 +58,16 @@ const styles = StyleSheet.create({
   },
   categoryItem: {
     alignItems: 'center',
+    
   },
   categoryButton: {
     borderRadius: 50,
-    padding: 12,
+    padding: 20,
     backgroundColor: '#E4D2D2',
   },
   categoryIcon: {
-    width: 30,
-    height: 30,
+    width: 35,
+    height: 35,
     tintColor: '#704F38',
   },
   categoryName: {

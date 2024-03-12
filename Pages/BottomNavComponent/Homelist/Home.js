@@ -52,8 +52,8 @@ export default function Home() {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
-        <View style={{}}>
-          <Text>Location</Text>
+        <View >
+          <Text style={styles.locationtitle}>Location</Text>
           <View style={styles.locationContainer}>
             <MaterialIcons name="location-on" size={30} color={'#704F38'} />
             <Text style={styles.locationText}>City, </Text>
@@ -99,6 +99,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginVertical: 10,
     marginHorizontal: 12,
+  },
+  locationtitle:{
+    color:'grey',
   },
   locationContainer: {
     flexDirection: 'row',

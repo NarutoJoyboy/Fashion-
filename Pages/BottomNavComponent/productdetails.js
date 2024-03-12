@@ -7,7 +7,7 @@ import {
   Image,
   Dimensions,
 } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
 import Carousel from 'react-native-reanimated-carousel';
@@ -44,6 +44,13 @@ export default function Productdetails() {
     {color: '#704F38', id: 6},
   ];
 
+  const [size, setsize]=useState({})
+  const SizeChange= ({itemId})=>{
+    setsize(prevsize=>({
+      ...prevsize,
+      [itemId]:!prevsize[itemId],
+    }))
+  }
   
   return (
     <View style={styles.container}>
@@ -100,9 +107,11 @@ export default function Productdetails() {
         <View>
           <Text style={styles.sizetxt}>Select Size</Text>
           <View style={styles.Size}>
-            {SizeList.map(item => {
+            {SizeList.map((item) => {
               return (
-                <TouchableOpacity key={item.id} style={styles.sizes}>
+                <TouchableOpacity key={item.id}
+                style={[styles.sizes, {backgroundColor:size[item.id] ? 'black' : 'white'}]}
+                 >
                   <Text style={styles.sizetxt2}>{item.name}</Text>
                 </TouchableOpacity>
               );
