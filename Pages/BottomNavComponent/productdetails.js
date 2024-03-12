@@ -45,7 +45,7 @@ export default function Productdetails() {
   ];
 
   const [size, setsize]=useState({})
-  const SizeChange= ({itemId})=>{
+  const SizeChange= (itemId)=>{
     setsize(prevsize=>({
       ...prevsize,
       [itemId]:!prevsize[itemId],
@@ -71,7 +71,6 @@ export default function Productdetails() {
         <Carousel
           width={Width}
           height={Height / 2}
-          // style={{borderWidth: 1}}
           data={Photos}
           renderItem={({item}) => {
             return (
@@ -110,9 +109,10 @@ export default function Productdetails() {
             {SizeList.map((item) => {
               return (
                 <TouchableOpacity key={item.id}
-                style={[styles.sizes, {backgroundColor:size[item.id] ? 'black' : 'white'}]}
+                style={[styles.sizes,{backgroundColor:size[item.id]?'brown':'white'}]}
+                onPress={()=>SizeChange(item.id)}
                  >
-                  <Text style={styles.sizetxt2}>{item.name}</Text>
+                  <Text style={[styles.sizetxt2, {color:size[item.id]?'white':'black'}]}>{item.name}</Text>
                 </TouchableOpacity>
               );
             })}
@@ -188,18 +188,21 @@ const styles = StyleSheet.create({
   Size: {
     flexDirection: 'row',
     marginVertical: 10,
+    
   },
   sizes: {
     borderWidth: 1,
     borderRadius: 10,
+    marginRight: 20,
     paddingHorizontal: 15,
     paddingVertical: 10,
-    marginRight: 20,
+    
   },
   sizetxt: {
     fontSize: 20,
     color: 'black',
     marginTop: 20,
+    
   },
   color: {
     borderRadius: 20,
