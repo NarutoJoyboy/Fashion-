@@ -3,13 +3,11 @@ import React, { useState } from 'react'
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import Home from './Homelist/Home';
 import Cart from './Cart';
-import Feather from "react-native-vector-icons/Feather"
-import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons"
 import Wishlist from './Wishlist';
-import AntDesign from 'react-native-vector-icons/AntDesign'
 import Profile from './Profile';
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
-import Icons from "react-native-vector-icons"
+import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons"
+import AntDesign from 'react-native-vector-icons/AntDesign'
+
 
 export default function BottomNavigation() {
 

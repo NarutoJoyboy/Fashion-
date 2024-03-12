@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { useNavigation } from '@react-navigation/native';
-import Productdetails from './productdetails';
+import Productdetails from '../productdetails';
 
 export default function Wishlist(){
   const navigation = useNavigation();
@@ -29,7 +29,7 @@ export default function Wishlist(){
 
   const itemlist = [
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'Brown Jacket',
         Price: '$87.43',
         rating: '5.0',
@@ -37,7 +37,7 @@ export default function Wishlist(){
         favouritechange: true,
       },
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'Red Jacket',
         Price: '$97.43',
         rating: '5',
@@ -45,7 +45,7 @@ export default function Wishlist(){
         favouritechange: true,
       },
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'Brown Pant',
         Price: '$80.43',
         rating: '5',
@@ -53,7 +53,7 @@ export default function Wishlist(){
         favouritechange: true,
       },
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'Red Pant',
         Price: '$187.43',
         rating: '5',
@@ -61,7 +61,7 @@ export default function Wishlist(){
         favouritechange: true,
       },
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'Blue Jacket',
         Price: '$287.43',
         rating: '5',
@@ -69,7 +69,7 @@ export default function Wishlist(){
         favouritechange: true,
       },
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'Green Jacket',
         Price: '$554.43',
         rating: '5',
@@ -77,7 +77,7 @@ export default function Wishlist(){
         favouritechange: true,
       },
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'Pink Jacket',
         Price: '$237.43',
         rating: '5',
@@ -85,7 +85,7 @@ export default function Wishlist(){
         favouritechange: true,
       },
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'Black Jacket',
         Price: '$827.43',
         rating: '5',
@@ -93,7 +93,7 @@ export default function Wishlist(){
         favouritechange: true,
       },
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'White Jacket',
         Price: '$807.43',
         rating: '5',
@@ -101,7 +101,7 @@ export default function Wishlist(){
         favouritechange: true,
       },
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'Black Pant',
         Price: '$871.43',
         rating: '5',
@@ -109,7 +109,7 @@ export default function Wishlist(){
         favouritechange: true,
       },
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'Brown T-shirt',
         Price: '$287.43',
         rating: '5',
@@ -117,7 +117,7 @@ export default function Wishlist(){
         favouritechange: true,
       },
       {
-        photo: require('../Images/carouselsliderimage/4.png'),
+        photo: require('../../Images/carouselsliderimage/4.png'),
         name: 'Brown Dress',
         Price: '$879.43',
         rating: '5',

@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { useNavigation } from '@react-navigation/native';
-import Productdetails from './productdetails';
+
 
 export default function Wishlist(){
   const navigation = useNavigation();

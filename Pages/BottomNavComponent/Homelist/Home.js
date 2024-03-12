@@ -16,9 +16,11 @@ import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import HomeCategory from '../Homelist/HomeCategory';
 import Productitems from '../productitems';
 
+const Width = Dimensions.get('window').width;
+const Height = Dimensions.get('window').height;
+
+
 export default function Home() {
-  const Width = Dimensions.get('window').width;
-  const Height = Dimensions.get('window').height;
 
   const Images = [
     {title: 'Shyam', image: require('../../Images/carouselsliderimage/1.jpg')},
@@ -34,96 +36,51 @@ export default function Home() {
   const CarouselView = () => {
     return (
       <View>
-        <Carousel
-          loop
-          width={Width / 1.3}
-          height={Height / 3}
-          ref={_carousel}
-          // autoPlay={onF}
-          scrollAnimationDuration={2000}
-          data={Images}
-          onSnapToItem={index => console.log('current index:', index)}
-          renderItem={({index, item}) => (
-            <View style={{borderWidth: 1}}>
-              <Image
-                source={item.image}
-                style={{
-                  width: Width / 1.3,
-                  height: Height / 3.5,
-                  borderRadius: 20,
-                  resizeMode: 'contain',
-                }}
-              />
-            </View>
-          )}
+        <Image
+          source={require('../../Images/carouselsliderimage/3.jpg')}
+          style={{
+            width: Width / 1.05,
+            height: Height / 4,
+            borderRadius: 20,
+            marginVertical: 10,
+          }}
         />
       </View>
     );
   };
 
   return (
-    <ScrollView>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          marginVertical: 10,
-          marginHorizontal: 20,
-        }}>
-        <View style={{marginHorizontal: 10}}>
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View style={styles.container}>
+        <View style={{}}>
           <Text>Location</Text>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={styles.locationContainer}>
             <MaterialIcons name="location-on" size={30} color={'#704F38'} />
-            <Text style={{fontSize: 15, color: 'black'}}>City, </Text>
-            <Text style={{fontSize: 15, color: 'black'}}>Country</Text>
+            <Text style={styles.locationText}>City, </Text>
+            <Text style={styles.locationText}>Country</Text>
             <TouchableOpacity>
-              <MaterialIcons
-                name="keyboard-arrow-down"
-                size={25}
-                color={'black'}
-              />
+              <MaterialIcons name="keyboard-arrow-down" size={25} color={'black'} />
             </TouchableOpacity>
           </View>
         </View>
-        <TouchableOpacity
-          style={{
-            backgroundColor: '#C5C5C5',
-            borderRadius: 30,
-            alignSelf: 'center',
-            padding: 10,
-          }}>
+        <TouchableOpacity style={styles.bellButton}>
           <Octicons name="bell-fill" size={20} color={'black'} />
         </TouchableOpacity>
       </View>
-      <View style={{flexDirection: 'row', marginHorizontal: 10}}>
-        <View
-          style={{
-            flexDirection: 'row',
-            borderWidth: 1,
-            borderRadius: 20,
-            width: Width / 1.2,
-            alignItems: 'center',
-            paddingHorizontal: 15,
-          }}>
+      <View style={{ flexDirection: 'row', marginHorizontal: 10 }}>
+        <View style={styles.searchContainer}>
           <Octicons name="search" size={25} color={'black'} />
           <TextInput
             placeholder="Search"
-            style={{width: Width / 1.38, paddingHorizontal: 10}}
+            style={styles.searchInput}
           />
         </View>
-        <TouchableOpacity
-          style={{
-            backgroundColor: '#704F38',
-            alignSelf: 'center',
-            padding: 10,
-            borderRadius: 20,
-            marginLeft: 5,
-          }}>
+        <TouchableOpacity style={styles.slidersButton}>
           <FontAwesome6 name="sliders" size={20} color={'white'} />
         </TouchableOpacity>
       </View>
 
-      <View style={{alignSelf: 'center'}}>
+      <View style={{ alignSelf: 'center' }}>
         <CarouselView />
       </View>
       <View>
@@ -137,5 +94,50 @@ export default function Home() {
 }
 
 const styles = StyleSheet.create({
-  
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 10,
+    marginHorizontal: 12,
+  },
+  locationContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  locationText: {
+    fontSize: 15,
+    color: 'black',
+  },
+  bellButton: {
+    backgroundColor: '#C5C5C5',
+    borderRadius: 30,
+    alignSelf: 'center',
+    paddingHorizontal: 10,
+    paddingVertical:8
+  },
+  searchContainer: {
+    flexDirection: 'row',
+    borderWidth: 1,
+    borderRadius: 20,
+    width: Width / 1.2,
+    alignItems: 'center',
+    paddingHorizontal: 15,
+  },
+  searchInput: {
+    width: Width / 1.38,
+    paddingHorizontal: 10,
+  },
+  slidersButton: {
+    backgroundColor: '#704F38',
+    alignSelf: 'center',
+    padding: 10,
+    borderRadius: 20,
+    marginLeft: 5,
+  },
+  carouselImage: {
+    width: Width / 1.05,
+    height: Height / 4,
+    borderRadius: 20,
+    marginVertical: 10,
+  },
 });

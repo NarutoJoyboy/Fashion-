@@ -1,36 +1,32 @@
-import {View, Text, FlatList, TouchableOpacity, Image} from 'react-native';
-import React, {useState} from 'react';
+// HomeCategory.js
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 export default function HomeCategory() {
   const [catlist, setcatlist] = useState([
-    {icon: require('../../Images/catlisticons/t-shirt.png'), name: 'T-shirt', id: '1'},
-    {icon: require('../../Images/catlisticons/jeans.png'), name: 'Pant', id: '2'},
-    {icon: require('../../Images/catlisticons/dress.png'), name: 'Dress', id: '3'},
-    {icon: require('../../Images/catlisticons/jacket.png'), name: 'Jacket', id: '4'},
+    { icon: require('../../Images/catlisticons/t-shirt.png'), name: 'T-shirt', id: '1' },
+    { icon: require('../../Images/catlisticons/jeans.png'), name: 'Pant', id: '2' },
+    { icon: require('../../Images/catlisticons/dress.png'), name: 'Dress', id: '3' },
+    { icon: require('../../Images/catlisticons/jacket.png'), name: 'Jacket', id: '4' },
+    { icon: require('../../Images/catlisticons/jacket.png'), name: 'Shoes', id: '5' },
   ]);
+
   return (
     <View>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          marginHorizontal: 20,
-        //   marginTop:20,
-          alignItems:'center'
-        }}>
-        <Text style={{fontSize:22, color:'black', }}>Category</Text>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>Category</Text>
         <TouchableOpacity>
-          <Text style={{fontSize:15, color:'#704F38', }}>Seel All</Text>
+          <Text style={styles.seeAllText}>See All</Text>
         </TouchableOpacity>
       </View>
-      <View style={{flexDirection: 'row', justifyContent:'space-between', marginHorizontal:30, marginVertical:10}}>
+      <View style={styles.categoryContainer}>
         {catlist.map(item => {
           return (
-            <View key={item.id} style={{alignItems:'center'}}>
-              <TouchableOpacity style={{borderRadius: 50, padding:15, backgroundColor:'#E4D2D2'}}>
-                <Image source={item.icon} style={{width: 30, height: 30, tintColor:'#704F38',}} />
+            <View key={item.id} style={styles.categoryItem}>
+              <TouchableOpacity style={styles.categoryButton}>
+                <Image source={item.icon} style={styles.categoryIcon} />
               </TouchableOpacity>
-              <Text style={{fontSize:17, color:'black', marginTop:5}}>{item.name}</Text>
+              <Text style={styles.categoryName}>{item.name}</Text>
             </View>
           );
         })}
@@ -38,3 +34,45 @@ export default function HomeCategory() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: 20,
+    alignItems: 'center',
+    marginTop:15,
+  },
+  headerText: {
+    fontSize: 18,
+    color: 'black',
+  },
+  seeAllText: {
+    fontSize: 15,
+    color: '#704F38',
+  },
+  categoryContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: 20,
+    marginVertical: 10,
+  },
+  categoryItem: {
+    alignItems: 'center',
+  },
+  categoryButton: {
+    borderRadius: 50,
+    padding: 12,
+    backgroundColor: '#E4D2D2',
+  },
+  categoryIcon: {
+    width: 30,
+    height: 30,
+    tintColor: '#704F38',
+  },
+  categoryName: {
+    fontSize: 14,
+    color: 'black',
+    marginTop: 5,
+  },
+});

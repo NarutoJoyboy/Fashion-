@@ -1,4 +1,4 @@
-import {View, Text, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, FlatList, StyleSheet, TouchableOpacity, Linking} from 'react-native';
 import React, { useState } from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -58,7 +58,8 @@ export default function Contactus() {
       communityicon: 'AntDesign',
       press: false,
       contact:'__prem._02',
-      link:'x',
+      link:Linking.openURL('https://www.youtube.com/'),
+      
     },
   ];
     const [show, setshow] = useState({});
@@ -126,7 +127,9 @@ export default function Contactus() {
                   }}
                 />
                 <TouchableOpacity
-                  style={{alignItems: 'center', flexDirection: 'row'}}>
+                  style={{alignItems: 'center', flexDirection: 'row'}}
+                  onPress={()=>item.link}
+                  >
                   <Text
                     style={{
                       marginHorizontal: 15,
