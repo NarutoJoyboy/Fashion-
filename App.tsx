@@ -17,7 +17,8 @@ import EditProfile from './Pages/BottomNavComponent/ProfileParts/EditProfile';
 import PaymentMethods from './Pages/BottomNavComponent/ProfileParts/Payment_Methods';
 import Setting from './Pages/BottomNavComponent/ProfileParts/Setting';
 import HelpCenter from './Pages/BottomNavComponent/ProfileParts/Help_Center';
-import Products from './Pages/BottomNavComponent/Homelist/Products';
+import LikeProducts from './Pages/BottomNavComponent/Homelist/LikeProducts';
+import Product from './Pages/BottomNavComponent/Product';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -55,8 +56,8 @@ export default function App() {
         <Stack.Screen name='PaymentMethods' component={PaymentMethods}/>
         <Stack.Screen name='Setting' component={Setting}/>
         <Stack.Screen name='HelpCenter' component={HelpCenter}/>
-        <Stack.Screen name='Products' component={Products}/>
-        
+        <Stack.Screen name='Products' component={LikeProducts}/>
+        <Stack.Screen name='Product' component={Product}/>
         
 
       </Stack.Navigator>

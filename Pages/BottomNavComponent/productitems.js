@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import Productdetails from './productdetails';
+import Product from './Product';
 
 export default function Productitems() {
   const navigation = useNavigation();
@@ -53,7 +53,7 @@ export default function Productitems() {
           <View key={item.id} style={styles.box}>
             <TouchableOpacity
               style={styles.opacity}
-              onPress={() => [navigation.navigate(Productdetails)]}>
+              onPress={() => [navigation.navigate(Product)]}>
               <Image source={item.image} style={styles.img} />
               <Text style={styles.txt}>{item.title}</Text>
             </TouchableOpacity>
