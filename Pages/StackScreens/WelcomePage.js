@@ -10,47 +10,46 @@ import React from 'react';
 import OnboardingScreen from './OnboardingScreen';
 import {useNavigation} from '@react-navigation/native';
 import Signin from './Signin';
+import CreateAccount from './CreateAcc';
 
 export default function WelcomePage() {
   const navigation = useNavigation();
   const width = Dimensions.get('window').width;
   return (
-    <View>
+    <View style={{flex:1}}>
       <View style={{flexDirection: 'row', marginTop: 50, marginHorizontal: 20}}>
         <Image
-          source={require('./Images/image10.png')}
+          source={require('../Images/catlisticons/image10.png')}
           style={[styles.image1, {width: width / 2.2}]}
         />
-        <View>
+        <View >
           <Image
-            source={require('./Images/image10.png')}
+            source={require('../Images/catlisticons/image10.png')}
             style={[styles.image2, {width: width / 2.3,}]}
           />
           <Image
-            source={require('./Images/image10.png')}
+            source={require('../Images/catlisticons/image10.png')}
             style={[styles.image3, {width: width / 2.3,}]}
           />
         </View>
       </View>
-      <View style={{alignSelf:'center'}}>
-        <Text style={{fontSize: 30, color: 'black', textAlign: 'center', textAlign:'center',marginHorizontal:50, marginTop:40}}>
-          The <Text style={{color: '#704F38'}}>Fashion App</Text> That Makes You
+      <View style={{alignSelf:'center',}}>
+        <Text style={{fontSize: 22, color: 'black', textAlign: 'center', textAlign:'center',marginHorizontal:50, marginTop:40}}>
+          The <Text style={{color: '#704F38'}}>Fashion App </Text>That Makes You
           Look Your Best
-        </Text>
-        <Text style={{textAlign: 'center', color:'grey', fontSize:17, marginHorizontal:60, marginTop:20}}>
-          Lorem Ipsum dipsum tipsum lipsim kilof unsun fvsvnvksnv vmvkv vksnkf
-          nvnvk fsnks
         </Text>
       </View>
       <View>
         <TouchableOpacity
           style={styles.button1}
-          onPress={() => navigation.navigate(OnboardingScreen)}>
+          // onPress={() => navigation.navigate(OnboardingScreen)}
+          onPress={()=>navigation.navigate(CreateAccount)}
+          >
           <Text style={styles.buttontxt1}>Let's Get Started</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.signinoption}>
-        <Text style={styles.accountoption}>Alreasy have an Account? </Text>
+        <Text style={styles.accountoption}>Already have an Account? </Text>
         <TouchableOpacity onPress={() => navigation.navigate(Signin)}>
           <Text style={styles.signin}>Sign In</Text>
         </TouchableOpacity>
@@ -65,16 +64,16 @@ const styles = StyleSheet.create({
     margin: 20,
     borderRadius: 20,
     padding: 10,
-    marginVertical: 30,
+    marginVertical: 50,
   },
   signinoption: {flexDirection: 'row', alignSelf: 'center'},
   signin: {
-    fontSize: 18,
+    fontSize: 15,
     color: '#704F38',
     textDecorationLine: 'underline',
   },
-  accountoption: {fontSize: 18, color: 'black'},
-  buttontxt1: {color: 'white', fontSize: 20, textAlign: 'center'},
+  accountoption: {fontSize: 15, color: 'black'},
+  buttontxt1: {color: 'white', fontSize: 18, textAlign: 'center'},
   image1: {height: 440, borderRadius: 80, marginRight: 10},
   image2: {
     height: 250,

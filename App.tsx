@@ -42,7 +42,7 @@ export default function App() {
 
   return (
     <NavigationContainer theme={MyTheme} >
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName='Welcome'>
         {/* <Stack.Screen name="Welcome" component={WelcomePage} />
         <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
         <Stack.Screen name="Signin" component={Signin} />

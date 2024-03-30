@@ -19,7 +19,7 @@ export default function CreateAccount({navigation}) {
             <View style={styles.contain4}>
                 <Text style={styles.txt}>Create Account</Text>
                 <Text style={styles.txt1}>Fill your information below or register</Text>
-                <Text>with your social account.</Text>
+                <Text style={styles.txt1}>with your social account.</Text>
             </View>
 
             <View>
@@ -84,7 +84,7 @@ export default function CreateAccount({navigation}) {
                 <FontAwesome name='apple' color={'black'} size={30}/>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.apple}>
-                <Image source={require('./Images/google-logo.png')}
+                <Image source={require('../Images/catlisticons/google-logo.png')}
                 
                 style={styles.img}
                 />
@@ -116,16 +116,17 @@ const styles = StyleSheet.create({
     },
     txt: {
         color: 'black',
-        fontSize: 35,
+        fontSize: 30,
         marginBottom:10
     },
     txt1: {
         color: 'grey',
+        fontSize:14
         
     },
     txt2: {
         color: 'black',
-        fontSize: 20,
+        fontSize: 17,
         marginTop: 20,
         marginBottom: 5
     },
@@ -133,7 +134,8 @@ const styles = StyleSheet.create({
         color: 'black',
         backgroundColor: '#E3E3E3',
         borderRadius: 10,
-        fontSize: 17
+        fontSize: 14,
+        paddingLeft:20
     },
     contain: {
         backgroundColor: '#E3E3E3',
