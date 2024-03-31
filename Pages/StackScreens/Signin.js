@@ -7,6 +7,7 @@ import {
   Alert,
   SafeAreaView,
   Dimensions,
+  TouchableWithoutFeedback,
 } from 'react-native';
 import React, {useState} from 'react';
 import Feather from 'react-native-vector-icons/Feather';
@@ -71,14 +72,14 @@ export default function Signin({navigation}) {
             maxLength={10}
           />
 
-          <TouchableOpacity onPress={() => setVieww(!Vieww)}>
+          <TouchableWithoutFeedback onPress={() => setVieww(!Vieww)}>
             <Feather
               name={Vieww ? 'eye' : 'eye-off'}
               color={'black'}
               size={25}
               style={styles.icon}
             />
-          </TouchableOpacity>
+          </TouchableWithoutFeedback>
         </View>
         <TouchableOpacity>
           <Text style={styles.txt3}>Forgot Password?</Text>
@@ -158,7 +159,7 @@ const styles = StyleSheet.create({
     right: 10,
   },
   txt3: {
-    color: '#DF711D',
+    color: '#704F38',
     textDecorationLine: 'underline',
     textAlign: 'right',
     marginVertical: 15,
@@ -207,7 +208,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   txt7: {
-    color: '#DF711D',
+    color: '#704F38',
     textDecorationLine: 'underline',
     fontSize: 15,
   },

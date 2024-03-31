@@ -8,7 +8,7 @@ import Profile from './Profile';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
-export default function BottomNavigation() {
+const BottomNavigation=()=> {
   const Tab = createBottomTabNavigator();
   
   const list = [
@@ -55,11 +55,11 @@ export default function BottomNavigation() {
         tabBarShowLabel:false,
         tabBarStyle:{
           position:'absolute',
-          bottom:20,
-          left:20,
-          right:20,
-          borderRadius:70,
-          height:80,
+          bottom:5,
+          left:10,
+          right:10,
+          borderRadius:50,
+          height:70,
           backgroundColor:'black',
           
         },
@@ -118,10 +118,16 @@ export default function BottomNavigation() {
   );
 }
 
+export default function MainScreens(){
+  return(
+  <BottomNavigation/>
+  )
+}
+
 const styles = StyleSheet.create({
   Activebackcolor:{
     backgroundColor: 'white',
-    padding: 25,
-    borderRadius: 40,
+    padding: 15,
+    borderRadius: 30,
   }
 });

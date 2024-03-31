@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   categoryButton: {
     borderRadius: 50,
-    padding: 20,
+    padding: 15,
     backgroundColor: '#E4D2D2',
   },
   categoryIcon: {

@@ -19,6 +19,7 @@ import Setting from './Pages/BottomNavComponent/ProfileParts/Setting';
 import HelpCenter from './Pages/BottomNavComponent/ProfileParts/Help_Center';
 import LikeProducts from './Pages/BottomNavComponent/Homelist/LikeProducts';
 import Product from './Pages/BottomNavComponent/Product';
+import MainScreens from './Pages/BottomNavComponent/BottomNavigation';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -31,25 +32,18 @@ export default function App() {
       background:'white',
     },
   };
-
-  const MainScreens = () =>{
-    return(
-    <BottomNavigation/>
-    )
-  }
-
   
 
   return (
     <NavigationContainer theme={MyTheme} >
       <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName='Welcome'>
-        {/* <Stack.Screen name="Welcome" component={WelcomePage} />
+        <Stack.Screen name="Welcome" component={WelcomePage} />
         <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
         <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name='CreateAccount' component={CreateAccount}/>
         <Stack.Screen name='VerifyCode' component={VerifyCode}/>
         <Stack.Screen name='NewPassword' component={NewPassword}/>
-        <Stack.Screen name='ProfileComplete' component={ProfileComplete}/> */}
+        <Stack.Screen name='ProfileComplete' component={ProfileComplete}/>
         <Stack.Screen name='MainScreens' component={MainScreens}/>
         <Stack.Screen name='Productdetails' component={Productdetails}/>
         <Stack.Screen name='EditProile' component={EditProfile}/>

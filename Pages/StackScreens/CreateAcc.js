@@ -1,4 +1,4 @@
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert, SafeAreaView, Image, Dimensions  } from 'react-native'
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert, SafeAreaView, Image, Dimensions, Animated, TouchableWithoutFeedback  } from 'react-native'
 import React, { useState } from 'react'
 import Feather from "react-native-vector-icons/Feather"
 import FontAwesome from "react-native-vector-icons/FontAwesome"
@@ -15,7 +15,7 @@ export default function CreateAccount({navigation}) {
     
 
     return (
-        <SafeAreaView style={styles.container}>
+        <Animated.View style={styles.container}>
             <View style={styles.contain4}>
                 <Text style={styles.txt}>Create Account</Text>
                 <Text style={styles.txt1}>Fill your information below or register</Text>
@@ -55,18 +55,21 @@ export default function CreateAccount({navigation}) {
                     
                     />
 
-                    <TouchableOpacity onPress={() => setVieww(!Vieww)}>
+                    <TouchableWithoutFeedback onPress={() => setVieww(!Vieww)}>
                         <Feather name={Vieww ? 'eye' : 'eye-off'} color={'black'} size={25} style={styles.icon} />
-                    </TouchableOpacity>
+                    </TouchableWithoutFeedback>
                 </View>
                 <View style={styles.contain5}>
-                    <TouchableOpacity onPress={()=>setischeck(!ischeck)} style={{paddingRight:10}}>
-                        <Feather name={ischeck ? 'check-square': 'square'} size={23} color={ischeck ? '#704F38': 'grey'} />
-                    </TouchableOpacity>
+                    
+                    <TouchableWithoutFeedback onPress={()=>setischeck(!ischeck)} style={{paddingRight:5}}>
+                        <Feather name={ischeck ? 'check-square': 'square'} size={18} color={ischeck ? '#704F38': 'grey'} />
+                    </TouchableWithoutFeedback>
                     <Text style={styles.txt8}>Agree with </Text>
                 <TouchableOpacity>
                     <Text style={styles.txt3}>Terms & Condition</Text>
                 </TouchableOpacity>
+                
+                
                 </View>
 
                 <TouchableOpacity style={styles.button1} onPress={()=>navigation.navigate(VerifyCode)}>
@@ -100,7 +103,7 @@ export default function CreateAccount({navigation}) {
                 </TouchableOpacity>
             </View>
 
-        </SafeAreaView>
+        </Animated.View>
     )
 }
 
@@ -151,20 +154,21 @@ const styles = StyleSheet.create({
     contain5:{
         flexDirection:'row',
         alignItems:'center',
-        marginTop:20
-    },
-    check:{
+        marginTop:10,
         
     },
+   
+    
     txt8:{
-        fontSize:15,
+        fontSize:14,
         color:'black',
+        paddingLeft:10
 
     },
     txt3: {
-        color: '#DF711D',
+        color: '#704F38',
         textDecorationLine: 'underline',
-        fontSize: 15,
+        fontSize: 12,
 
     },
     button1: {
