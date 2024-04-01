@@ -13,7 +13,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import Carousel, {Pagination} from 'react-native-reanimated-carousel';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
-import HomeCategory from '../Homelist/HomeCategory';
+import HomeCategory from './HomeCategory';
 import Productitems from '../productitems';
 
 const Width = Dimensions.get('window').width;

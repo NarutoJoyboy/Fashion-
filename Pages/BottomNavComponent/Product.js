@@ -1,6 +1,8 @@
-import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet, ActivityIndicator, Dimensions, Animated  } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet, ActivityIndicator, Dimensions, Animated, TextInput  } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import AntDesign from "react-native-vector-icons/AntDesign";
+import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
+import Octicons from "react-native-vector-icons/Octicons"
 
 const Height= Dimensions.get('window').height
 const Width = Dimensions.get('window').width
@@ -28,15 +30,30 @@ export default function Product() {
         DataFetch()
     },[]);
   return (
-    <View>
+    <View style={{ alignSelf:'center'}}>
+      
       {isloading? <ActivityIndicator size="large" style={{height:Height}}/> :
 
+      <View>
+        <View style={{ flexDirection: 'row', marginHorizontal: 10 }}>
+        <View style={styles.searchContainer}>
+          <Octicons name="search" size={25} color={'black'} />
+          <TextInput
+            placeholder="Search"
+            style={styles.searchInput}
+          />
+        </View>
+        <TouchableOpacity style={styles.slidersButton}>
+          <FontAwesome6 name="sliders" size={20} color={'white'} />
+        </TouchableOpacity>
+      </View>
+      
         <FlatList
         data={dataitem}
         keyExtractor={item=>item.id}
       numColumns={2}
       renderItem={({item})=>(
-        <Animated.View style={{borderWidth:1, elevation:1, shadowColor:'black', }}>
+        <Animated.View style={{ borderWidth:1,shadowColor:'grey', margin:10, borderRadius:10,  }}>
 
         <TouchableOpacity onPress={()=>navigation.navigate(Productdetails)}>
 
@@ -48,33 +65,21 @@ export default function Product() {
           />
           <View 
           style={styles.itemDetails}>
-            <Text style={styles.itemName}>
+            <Text style={styles.itemName} numberOfLines={1}>
               {item.title}
             </Text>
-            <View style={styles.ratingContainer}>
-              <AntDesign name="star" size={15} color={'red'} />
-              
-            </View>
+            
           </View>
-          <Text style={styles.priceText}>{item.price}</Text>
+          <Text style={styles.priceText}>${item.price}</Text>
         </Animated.View>
               </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.likeButton}
-            // onPress={() => Togglelike(item.id)}
-            >
-            <AntDesign
-              name='heart'
-              size={20}
-              color={'#704F38'}
-              
-            />
-          </TouchableOpacity>
+          
     </Animated.View>
       )}
       
       />
+    </View>
     }
     </View>
   )
@@ -87,15 +92,43 @@ item:{
     
 },
 itemImage:{
-    width:Width/2.3,
+    width:Width/2.6,
     height:Height/5.8,
+    margin:10
 },
-likeButton:{
-  position:'absolute',
-  borderWidth:1,
-  padding:10,
-  borderRadius:20,
-  backgroundColor:'white',
-  right:10
-}
+itemDetails: {
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  margin:5,
+},
+itemName: {
+  color: 'black',
+  fontSize: 16,
+  
+},
+priceText: {
+  color: 'black',
+  fontSize: 16,
+  fontWeight:'bold', margin:5
+},
+searchContainer: {
+  flexDirection: 'row',
+  borderWidth: 1,
+  borderRadius: 20,
+  width: Width / 1.2,
+  alignItems: 'center',
+  paddingHorizontal: 15,
+  marginTop:10
+},
+searchInput: {
+  width: Width / 1.38,
+  paddingHorizontal: 10,
+},
+slidersButton: {
+  backgroundColor: '#704F38',
+  alignSelf: 'center',
+  padding: 10,
+  borderRadius: 20,
+  marginLeft: 5,
+},
 })
